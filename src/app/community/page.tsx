@@ -15,7 +15,7 @@ export default function CommunityPage() {
       <Nav variant="dark" />
       <main className="min-h-screen bg-ink text-light">
         <section className="mx-auto max-w-[1280px] px-6 pb-24 pt-[140px] lg:px-8 lg:pb-32 lg:pt-[180px]">
-          <div className="flex min-h-[calc(100vh-260px)] flex-col justify-center">
+          <div className="flex min-h-[calc(100vh-180px)] flex-col justify-center">
             <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
               Community
             </p>
