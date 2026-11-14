@@ -1,14 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import {
   community,
   communityFormats,
+  isFeatured,
+  sortCommunity,
   type CommunityEntry,
 } from "@/content/community";
 
 function Card({ entry }: { entry: CommunityEntry }) {
+  const featured = isFeatured(entry);
+
   return (
     <figure className="group">
       <div className="relative overflow-hidden border border-light/12 bg-light/5">
@@ -19,7 +23,7 @@ function Card({ entry }: { entry: CommunityEntry }) {
           height={1350}
           className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-[1.015]"
         />
-        {entry.featured ? (
+        {featured ? (
           <span className="absolute left-4 top-4 rounded-full bg-ink/80 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-light backdrop-blur-sm">
             Featured
           </span>
@@ -39,8 +43,13 @@ function Card({ entry }: { entry: CommunityEntry }) {
 
 export function CommunityGrid() {
   const [filter, setFilter] = useState<string>("All");
-  const visible =
-    filter === "All" ? community : community.filter((item) => item.format === filter);
+
+  const visible = useMemo(() => {
+    const sorted = sortCommunity(community);
+    return filter === "All"
+      ? sorted
+      : sorted.filter((entry) => entry.format === filter);
+  }, [filter]);
 
   return (
     <>
@@ -65,6 +74,11 @@ export function CommunityGrid() {
           {visible.length} {visible.length === 1 ? "post" : "posts"}
         </span>
       </div>
+
+      <p className="mt-4 text-[12px] text-light/35">
+        Being listed is free, for as long as you want. Paying only moves your post to the
+        top.
+      </p>
 
       {visible.length === 0 ? (
         <p className="mt-16 max-w-[46ch] text-[15px] leading-[1.7] text-light/50">

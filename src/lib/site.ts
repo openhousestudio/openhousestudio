@@ -12,6 +12,18 @@ export const site = {
     price: 39,
     checkoutUrl: "https://buy.stripe.com/28E4gy4aicDmbJq4ZD3sI05",
   },
+  community: {
+    week: {
+      price: 10,
+      days: 7,
+      checkoutUrl: "https://buy.stripe.com/aFa4gycGObzi3cUdw93sI06",
+    },
+    month: {
+      price: 30,
+      days: 30,
+      checkoutUrl: "https://buy.stripe.com/4gM7sK9uCfPyeVC1Nr3sI07",
+    },
+  },
   dropDay: "Monday",
   nav: [
     { label: "Formats", href: "#formats" },

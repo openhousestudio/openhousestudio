@@ -55,6 +55,15 @@ export default function TermsPage() {
             hello@openhousestudio.online.
           </p>
           <p>
+            Community listings are free and stay up for as long as the agent wants, subject
+            to a written opt-in and the content rules. Featured placement is a one-off
+            purchase: {site.community.week.days} days for ${site.community.week.price}, or{" "}
+            {site.community.month.days} days for ${site.community.month.price}. It buys
+            position at the top of the community page and nothing else. Views, clicks, and
+            enquiries are not guaranteed. Placement is always labelled, expires on the date
+            purchased, and is not refundable once it starts.
+          </p>
+          <p>
             These terms are governed by New Zealand law. Nothing here limits your rights
             under the Consumer Guarantees Act 1993 or the Fair Trading Act 1986.
           </p>

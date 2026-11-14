@@ -41,23 +41,31 @@ export default function CommunityPage() {
                 Want yours in the grid?
               </h2>
               <p className="mt-5 max-w-[46ch] text-[16px] leading-[1.7] text-light/60">
-                Tell us when you want a post featured. Featured spots sit at the top of the
-                page and are always labelled. Nothing else about the order is for sale.
+                Being listed is free, for as long as you want. If you want your post at the
+                top, buy placement: {site.community.week.days} days for $
+                {site.community.week.price}, or {site.community.month.days} days for $
+                {site.community.month.price}. Placement only, always labelled.
               </p>
+              <a
+                href={`mailto:${site.email}?subject=Free%20community%20listing`}
+                className="mt-4 inline-block text-[13px] text-light/45 underline underline-offset-4 transition-colors hover:text-light"
+              >
+                Or ask for a free listing
+              </a>
             </div>
 
             <div className="flex flex-wrap gap-3">
               <a
-                href="/#free"
+                href={site.community.week.checkoutUrl}
                 className="inline-flex items-center rounded-full bg-accent px-6 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-primary hover:text-light"
               >
-                Become a founder
+                Top for {site.community.week.days} days — ${site.community.week.price}
               </a>
               <a
-                href={`mailto:${site.email}?subject=Community%20feature`}
+                href={site.community.month.checkoutUrl}
                 className="inline-flex items-center rounded-full border border-light/25 px-6 py-3.5 text-[15px] font-medium text-light transition-colors hover:border-light/50"
               >
-                Ask about a feature
+                Top for {site.community.month.days} days — ${site.community.month.price}
               </a>
             </div>
           </div>
