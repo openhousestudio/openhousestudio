@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { Glow } from "../glow";
+import { site } from "@/lib/site";
 
 type State = "idle" | "sending" | "done" | "error";
 
@@ -98,6 +99,27 @@ export function FinalCta() {
           By subscribing you agree to receive occasional emails from Open House Studio.
           Unsubscribe any time.
         </p>
+
+        <div className="mx-auto mt-14 max-w-[480px] border-t border-line pt-10">
+          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+            Founder offer
+          </p>
+          <p className="mt-3 text-[16px] leading-[1.7] text-ink">
+            Want the whole library while it is being built? Founders pay $
+            {site.founder.price} a month, locked for your first 12 months, and get every
+            template as it ships.
+          </p>
+          <a
+            href={site.founder.checkoutUrl}
+            className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-full border border-ink px-6 text-[15px] font-medium text-ink transition-colors hover:bg-ink hover:text-bg"
+          >
+            Become a founder — ${site.founder.price}/month
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+          <p className="mt-3 text-[12px] text-muted">
+            Cancel any time. Full refund on request before launch.
+          </p>
+        </div>
       </div>
     </section>
   );

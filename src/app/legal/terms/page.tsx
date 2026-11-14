@@ -29,6 +29,17 @@ export default function TermsPage() {
             and never fall below $10. Cancelling resets the price to $25 if you return.
           </p>
           <p>
+            The founder offer is $9 per month on a recurring monthly subscription. It was
+            offered while the library was still being built and is locked for your first 12
+            months. We will contact you before your price changes. Founder subscriptions are
+            refundable in full on request at any time before launch.
+          </p>
+          <p>
+            Subscriptions renew automatically each month until cancelled. You can cancel at
+            any time and keep access until the end of the paid period. No further charge is
+            made after cancellation.
+          </p>
+          <p>
             Refunds are available within 7 days of a charge. Contact
             hello@openhousestudio.online.
           </p>

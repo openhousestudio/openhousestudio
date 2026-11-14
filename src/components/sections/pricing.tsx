@@ -4,6 +4,7 @@ import { Reveal } from "../reveal";
 import { SubscribeButton } from "../subscribe-button";
 
 export function Pricing() {
+  const stripeReady = Boolean(process.env.STRIPE_SECRET_KEY);
   return (
     <section id="pricing" className="scroll-mt-24 bg-ink py-24 text-bg lg:py-32">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-8">
@@ -77,12 +78,14 @@ export function Pricing() {
               >
                 Start free, upgrade later
               </a>
-              <div className="mt-3">
-                <SubscribeButton
-                  label={`Subscribe at $${site.price.start}/month`}
-                  className="inline-flex items-center gap-2 rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg/50 disabled:opacity-70"
-                />
-              </div>
+              {stripeReady ? (
+                <div className="mt-3">
+                  <SubscribeButton
+                    label={`Subscribe at $${site.price.start}/month`}
+                    className="inline-flex items-center gap-2 rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg/50 disabled:opacity-70"
+                  />
+                </div>
+              ) : null}
             </div>
           </Reveal>
         </div>

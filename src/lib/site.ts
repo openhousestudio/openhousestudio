@@ -8,6 +8,10 @@ export const site = {
     floor: 10,
     decayPercent: 5,
   },
+  founder: {
+    price: 9,
+    checkoutUrl: "https://buy.stripe.com/5kQaEW0Y60UEcNu0Jn3sI04",
+  },
   nav: [
     { label: "Templates", href: "#formats" },
     { label: "How it works", href: "#how" },
