@@ -25,7 +25,7 @@ export const formats: Format[] = [
     body: "Send an address, a price and three photos. We send back a carousel or single post, with a caption that opens with the street, ends with the open home, and says nothing an agent would not say.",
     post: {
       kicker: "Just listed",
-      title: "14 Awa Road",
+      title: "Awa Road",
       meta: "4 bed · 2 bath · 2 garage",
       price: "$1,240,000",
     },
@@ -41,7 +41,7 @@ export const formats: Format[] = [
     post: {
       kicker: "Open home",
       title: "Saturday, 11–11:45",
-      meta: "14 Awa Road, Onehunga",
+      meta: "Awa Road, Onehunga",
       price: "All welcome",
     },
   },
@@ -56,7 +56,7 @@ export const formats: Format[] = [
     post: {
       kicker: "Just sold",
       title: "Under offer in 9 days",
-      meta: "14 Awa Road, Onehunga",
+      meta: "Awa Road, Onehunga",
       price: "Sold",
     },
   },

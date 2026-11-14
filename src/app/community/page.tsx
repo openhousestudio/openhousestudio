@@ -15,18 +15,20 @@ export default function CommunityPage() {
       <Nav variant="dark" />
       <main className="min-h-screen bg-ink text-light">
         <section className="mx-auto max-w-[1280px] px-6 pb-24 pt-[140px] lg:px-8 lg:pb-32 lg:pt-[180px]">
-          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
-            Community
-          </p>
+          <div className="flex min-h-[calc(100vh-260px)] flex-col justify-center">
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+              Community
+            </p>
 
-          <h1 className="display mt-6 max-w-[18ch] text-[clamp(44px,7vw,96px)] text-light">
-            Real posts, real listings.
-          </h1>
+            <h1 className="display mt-6 max-w-[18ch] text-[clamp(44px,7vw,96px)] text-light">
+              Real posts, real listings.
+            </h1>
 
-          <p className="mt-7 max-w-[52ch] text-[17px] leading-[1.7] text-light/60">
-            Every post here was made for an agent, then published by them. Nothing is
-            invented, and nobody is shown without asking first.
-          </p>
+            <p className="mt-7 max-w-[52ch] text-[17px] leading-[1.7] text-light/60">
+              Every post here was made for an agent, then published by them. Nothing is
+              invented, and nobody is shown without asking first.
+            </p>
+          </div>
 
           <CommunityGrid />
         </section>
@@ -57,13 +59,13 @@ export default function CommunityPage() {
             <div className="flex flex-wrap gap-3">
               <a
                 href={site.community.week.checkoutUrl}
-                className="inline-flex items-center rounded-full bg-accent px-6 py-3.5 text-[15px] font-medium text-ink transition-colors hover:bg-primary hover:text-light"
+                className="inline-flex items-center rounded-full bg-accent px-6 py-3.5 text-[15px] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:bg-primary hover:text-light active:translate-y-0"
               >
                 Top for {site.community.week.days} days — ${site.community.week.price}
               </a>
               <a
                 href={site.community.month.checkoutUrl}
-                className="inline-flex items-center rounded-full border border-light/25 px-6 py-3.5 text-[15px] font-medium text-light transition-colors hover:border-light/50"
+                className="inline-flex items-center rounded-full border border-light/25 px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:border-light/50 active:translate-y-0"
               >
                 Top for {site.community.month.days} days — ${site.community.month.price}
               </a>

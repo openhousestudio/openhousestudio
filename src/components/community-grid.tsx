@@ -13,8 +13,17 @@ function Card({ entry, compact = false }: { entry: CommunityEntry; compact?: boo
   const featured = isFeatured(entry);
 
   return (
-    <figure className="group">
-      <div className="relative aspect-[4/5] overflow-hidden border border-light/12 bg-[#F7F4EF]">
+    <figure className="group transition-transform duration-300 ease-out hover:-translate-y-0.5">
+      <figcaption className="mb-2 flex items-baseline justify-between gap-3">
+        <span className="text-[10px] uppercase tracking-[0.16em] text-light/50">
+          {entry.format} · {entry.suburb}
+        </span>
+        {entry.example && !compact ? (
+          <span className="text-[10px] text-light/30">Example</span>
+        ) : null}
+      </figcaption>
+
+      <div className="relative aspect-[4/5] overflow-hidden border border-light/12 bg-[#F7F4EF] transition-colors duration-300 group-hover:border-light/30">
         {featured ? (
           <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 text-[9px] uppercase tracking-[0.16em] text-light backdrop-blur-sm">
             Featured
@@ -28,15 +37,6 @@ function Card({ entry, compact = false }: { entry: CommunityEntry; compact?: boo
           <p className="text-[12px] text-light/70">{entry.contact.phone}</p>
         </div>
       </div>
-
-      <figcaption className="mt-3 flex items-baseline justify-between gap-3 border-t border-light/12 pt-2">
-        <span className="text-[10px] uppercase tracking-[0.16em] text-light/50">
-          {entry.format} · {entry.suburb}
-        </span>
-        {entry.example && !compact ? (
-          <span className="text-[10px] text-light/30">Example</span>
-        ) : null}
-      </figcaption>
     </figure>
   );
 }
@@ -74,8 +74,10 @@ export function CommunityGrid() {
             onClick={() => setFilter(format)}
             aria-pressed={filter === format}
             className={
-              "text-[11px] uppercase tracking-[0.16em] transition-colors " +
-              (filter === format ? "text-light" : "text-light/40 hover:text-light/70")
+              "text-[11px] uppercase tracking-[0.16em] transition-all duration-200 active:translate-y-px " +
+              (filter === format
+                ? "text-light"
+                : "text-light/40 hover:text-light/70")
             }
           >
             {format}
@@ -95,7 +97,7 @@ export function CommunityGrid() {
       ) : null}
 
       {free.length > 0 ? (
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-12 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
           {free.map((entry) => (
             <Card key={entry.slug} entry={entry} compact />
           ))}

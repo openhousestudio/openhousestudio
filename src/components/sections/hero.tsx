@@ -49,14 +49,14 @@ export function Hero() {
           <motion.div className="mt-9 flex flex-wrap items-center gap-3" {...rise(5)}>
             <a
               href="#free"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-colors hover:bg-primary-hover"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0"
             >
               Get 5 free templates
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center rounded-full border border-line px-6 py-3.5 text-[15px] font-medium text-ink transition-colors hover:border-ink/30"
+              className="inline-flex items-center rounded-full border border-line px-6 py-3.5 text-[15px] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:border-ink/30 active:translate-y-0"
             >
               See how pricing works
             </a>

@@ -18,10 +18,16 @@ export function CommunityStrip() {
 
           <a
             href="/community"
-            className="inline-flex items-center gap-2 text-[15px] font-medium text-primary transition-colors hover:text-primary-hover"
+            className="group inline-flex items-center gap-2 text-[15px] font-medium text-primary transition-colors hover:text-primary-hover"
           >
-            Browse the community
-            <ArrowRight className="h-4 w-4" aria-hidden />
+            <span className="relative">
+              Browse the community
+              <span
+                aria-hidden
+                className="absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-current transition-transform duration-300 ease-out group-hover:scale-x-100"
+              />
+            </span>
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" aria-hidden />
           </a>
         </div>
 
@@ -29,13 +35,13 @@ export function CommunityStrip() {
           {picks.map((entry, i) => (
             <Reveal key={entry.slug} delay={i * 0.06}>
               <a href="/community" className="group block">
-                <div className="aspect-[4/5] overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)]" />
-                <p className="mt-3 flex items-baseline justify-between border-t border-line pt-2 text-[11px] uppercase tracking-[0.16em] text-muted">
+                <p className="mb-2 flex items-baseline justify-between text-[11px] uppercase tracking-[0.16em] text-muted">
                   <span>
                     {entry.format} · {entry.suburb}
                   </span>
-                  <span className="text-muted/60">View</span>
+                  <span className="text-muted/50">View</span>
                 </p>
+                <div className="aspect-[4/5] overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)] transition-all duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-ink/20 group-hover:shadow-[0_20px_40px_-24px_rgba(26,23,20,0.5)]" />
               </a>
             </Reveal>
           ))}

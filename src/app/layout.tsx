@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     icon: "/brand/favicon.svg",
     apple: "/brand/icon-180.png",
   },
+  other: {
+    "page-type": "service",
+    "site-kind": "other",
+    "page-kind": "service",
+  },
 };
 
 export default function RootLayout({
