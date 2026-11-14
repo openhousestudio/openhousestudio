@@ -10,7 +10,7 @@ export const site = {
   },
   founder: {
     price: 39,
-    checkoutUrl: "https://buy.stripe.com/5kQaEW0Y60UEcNu0Jn3sI04",
+    checkoutUrl: "https://buy.stripe.com/28E4gy4aicDmbJq4ZD3sI05",
   },
   dropDay: "Monday",
   nav: [
