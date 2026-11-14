@@ -1,10 +1,10 @@
 import { Reveal } from "../reveal";
 
 const steps = [
-  { title: "Pick a format", body: "Listing, open house, just sold, review or story." },
-  { title: "Swap the details", body: "Address, price, photos. The layout holds." },
-  { title: "Paste the caption", body: "Written for you. Change the street name and go." },
-  { title: "Post it", body: "Feed, story, or both. No design skills required." },
+  { title: "Send the details", body: "Address, price and photos. One short form, no back and forth." },
+  { title: "We design it", body: "Posts and captions in your brand, across any format you need." },
+  { title: "Monday drop", body: "Everything lands in one batch, ready to post all week." },
+  { title: "Tweak it", body: "Unlimited tweaks for seven days after delivery, sent as one list." },
 ];
 
 export function How() {
@@ -14,10 +14,11 @@ export function How() {
         <div>
           <p className="label">How it works</p>
           <h2 className="display mt-4 text-[clamp(30px,4vw,56px)] text-ink">
-            From listing to post in four steps.
+            From listing photos to finished posts.
           </h2>
           <p className="mt-5 max-w-[40ch] text-[17px] leading-[1.7] text-muted">
-            The whole job is under two minutes once the photos are in your phone.
+            You send the listing. We send back posts you can publish without opening a
+            design tool.
           </p>
         </div>
 

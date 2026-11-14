@@ -14,7 +14,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-[28ch] text-[13px] leading-[1.6] text-muted">
-              Editable social templates for real estate agents, with the captions
+              Unlimited social posts for real estate agents, with the captions
               already written.
             </p>
           </div>
@@ -22,7 +22,7 @@ export function Footer() {
           <div>
             <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Product</p>
             <ul className="mt-4 space-y-2 text-[14px] text-ink/80">
-              <li><a href="#formats" className="hover:text-primary">Templates</a></li>
+              <li><a href="#formats" className="hover:text-primary">Formats</a></li>
               <li><a href="#how" className="hover:text-primary">How it works</a></li>
               <li><a href="#pricing" className="hover:text-primary">Pricing</a></li>
               <li><a href="#free" className="hover:text-primary">Free templates</a></li>

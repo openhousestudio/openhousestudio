@@ -27,7 +27,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-[1280px] gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-8 lg:px-8">
         <div>
           <motion.p className="label" {...rise(0)}>
-            Templates for agents
+            Unlimited posts for agents
           </motion.p>
 
           <h1 className="display mt-5 text-[clamp(44px,6vw,88px)] text-ink">
@@ -42,9 +42,8 @@ export function Hero() {
             className="mt-7 max-w-[46ch] text-[18px] leading-[1.65] text-muted"
             {...rise(4)}
           >
-            Thirty editable templates for listings, open houses and just-sold posts.
-            Every one comes with the caption already written. Your price drops every
-            month you stay.
+            Send us your listing and we send back the posts. Unlimited requests, every
+            caption written, one drop every Monday. Your price drops every month you stay.
           </motion.p>
 
           <motion.div className="mt-9 flex flex-wrap items-center gap-3" {...rise(5)}>
@@ -64,7 +63,7 @@ export function Hero() {
           </motion.div>
 
           <motion.p className="mt-8 text-[13px] text-muted" {...rise(6)}>
-            30 templates · 5 formats · new every month · no design skills needed
+            Unlimited requests · Monday drops · captions included · no design skills
           </motion.p>
         </div>
 

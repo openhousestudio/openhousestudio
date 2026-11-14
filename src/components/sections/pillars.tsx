@@ -5,17 +5,17 @@ const pillars = [
   {
     icon: PenLine,
     title: "Captions included",
-    body: "The words are already written. Swap the address and post.",
+    body: "Every post arrives with the words already written. Approve and post.",
   },
   {
     icon: House,
-    title: "Built for property",
-    body: "Listing, open house, just sold, review, story. Nothing generic.",
+    title: "Unlimited requests",
+    body: "Send as many listings as you like. One queue, worked in order, no credit counting.",
   },
   {
     icon: CalendarClock,
-    title: "Fresh every month",
-    body: "Ten new templates a month, so the library keeps growing.",
+    title: "New every Monday",
+    body: "Everything lands in one drop at the start of the week, ready to post.",
   },
 ];
 

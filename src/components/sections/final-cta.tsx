@@ -105,9 +105,9 @@ export function FinalCta() {
             Founder offer
           </p>
           <p className="mt-3 text-[16px] leading-[1.7] text-ink">
-            Want the whole library while it is being built? Founders pay $
-            {site.founder.price} a month, locked for your first 12 months, and get every
-            template as it ships.
+            Want unlimited posts while the studio is still small? Founders pay $
+            {site.founder.price} a month, locked for as long as they stay, and get the same
+            Monday drops.
           </p>
           <a
             href={site.founder.checkoutUrl}

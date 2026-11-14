@@ -5,13 +5,14 @@ export function Formats() {
   return (
     <section id="formats" className="mx-auto max-w-[1280px] scroll-mt-24 px-6 py-24 lg:px-8 lg:py-32">
       <div className="max-w-[52ch]">
-        <p className="label">The library</p>
+        <p className="label">The formats</p>
         <h2 className="display mt-4 text-[clamp(30px,4vw,56px)] text-ink">
-          Five formats. One library.
+          Five formats. One studio.
         </h2>
         <p className="mt-5 text-[17px] leading-[1.7] text-muted">
           Every format covers a different week of an agent's job: the announcement,
-          the weekend, the result, the proof, and the quiet days in between.
+          the weekend, the result, the proof, and the quiet days in between. Ask for any
+          of them, as many times as you need.
         </p>
       </div>
 
@@ -25,9 +26,7 @@ export function Formats() {
               <h3 className="mt-6 font-sans text-[17px] font-semibold text-ink">
                 {format.name}
               </h3>
-              <p className="mt-1 text-[13px] tabular-nums text-muted">
-                {format.count} templates
-              </p>
+              <p className="mt-1 text-[13px] tabular-nums text-muted">Included</p>
               <p className="mt-4 text-[14px] leading-[1.6] text-muted">{format.blurb}</p>
             </div>
           </Reveal>

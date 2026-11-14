@@ -1,9 +1,9 @@
 export function Proof() {
   const items = [
-    "30 templates at launch",
-    "10 new every month",
+    "Unlimited requests",
+    "New drop every Monday",
     "Captions included",
-    "Commercial use",
+    "Cancel any time",
   ];
 
   return (

@@ -4,16 +4,17 @@ export const site = {
   url: "https://openhousestudio.online",
   email: "hello@openhousestudio.online",
   price: {
-    start: 25,
-    floor: 10,
+    start: 99,
+    floor: 59,
     decayPercent: 5,
   },
   founder: {
-    price: 9,
+    price: 39,
     checkoutUrl: "https://buy.stripe.com/5kQaEW0Y60UEcNu0Jn3sI04",
   },
+  dropDay: "Monday",
   nav: [
-    { label: "Templates", href: "#formats" },
+    { label: "Formats", href: "#formats" },
     { label: "How it works", href: "#how" },
     { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
@@ -21,5 +22,5 @@ export const site = {
 };
 
 export const priceLadder = [
-  25, 24, 23, 21, 20, 19, 18, 17, 17, 16, 15, 14, 14, 13, 12, 12, 11, 11, 10,
+  99, 94, 89, 85, 81, 77, 73, 69, 66, 63, 60, 59,
 ];

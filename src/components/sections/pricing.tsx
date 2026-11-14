@@ -13,11 +13,11 @@ export function Pricing() {
             Pricing
           </p>
           <h2 className="display mt-4 text-[clamp(30px,4vw,56px)] text-bg">
-            Start at $25. Pay less every month.
+            Start at ${site.price.start}. Pay less every month.
           </h2>
           <p className="mt-5 text-[17px] leading-[1.7] text-bg/70">
-            Every month you stay, your price drops 5%, down to $10. Cancel and come
-            back, and the clock resets.
+            Every month you stay, your price drops 5%, down to ${site.price.floor}. Cancel
+            and come back, and the clock resets.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export function Pricing() {
               <p className="mt-4 font-sans text-4xl font-semibold tabular-nums">$0</p>
               <ul className="mt-7 space-y-3 text-[15px] text-bg/80">
                 {[
-                  "Five sample templates, one per format",
+                  "Five sample posts, one per format",
                   "Captions included",
                   "No card required",
                 ].map((item) => (
@@ -52,7 +52,7 @@ export function Pricing() {
               <div className="flex items-center justify-between">
                 <p className="text-[11px] uppercase tracking-[0.16em] text-accent">Studio</p>
                 <p className="text-[11px] uppercase tracking-[0.16em] text-bg/50">
-                  full library
+                  unlimited
                 </p>
               </div>
               <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-bg/20 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-bg/60">
@@ -65,10 +65,11 @@ export function Pricing() {
               </p>
               <ul className="mt-7 space-y-3 text-[15px] text-bg/80">
                 {[
-                  "All 30 templates, plus 10 new every month",
-                  "Commercial use for client listings",
-                  "Price drops 5% monthly to $10",
-                  "7-day refunds",
+                  "Unlimited requests, every month",
+                  "Captions written for you",
+                  "One drop every Monday",
+                  "Unlimited tweaks for 7 days",
+                  "Cancel any time",
                 ].map((item) => (
                   <li key={item} className="flex gap-3">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" aria-hidden />
@@ -99,10 +100,9 @@ export function Pricing() {
             Founder mode
           </p>
           <p className="mt-3 max-w-[70ch] text-[15px] leading-[1.7] text-bg/80">
-            The Studio plan at ${site.price.start} is not on sale yet. While the library is
-            still being built, the founder plan is the only way in: $
-            {site.founder.price} a month, locked for your first 12 months. When Studio
-            launches, founders keep their price.
+            The Studio plan at ${site.price.start} is not on sale yet. Until it opens, the
+            founder plan is the only way in: ${site.founder.price} a month, locked for as
+            long as you stay. Founders keep that price when Studio launches.
           </p>
           <a
             href={site.founder.checkoutUrl}
@@ -126,7 +126,7 @@ export function Pricing() {
             ))}
           </div>
           <p className="mt-3 text-[12px] text-bg/45">
-            Month one to month nineteen. Then it stays at $10.
+            Month one to month twelve. Then it stays at ${site.price.floor}.
           </p>
         </div>
       </div>

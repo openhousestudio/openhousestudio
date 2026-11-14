@@ -1,26 +1,26 @@
 export const faqs = [
   {
-    q: "What do I need to edit the templates?",
-    a: "A free Canva account. Open the template link, click Use template, and a copy lands in your own designs. Edits happen in the browser.",
+    q: "What do I actually get each month?",
+    a: "Unlimited social posts for your listings, each with the caption written. You send the address, price and photos; we send back finished posts every Monday, ready to publish.",
   },
   {
-    q: "Do I need a paid Canva plan?",
-    a: "No. A free account can open and edit a template link. Every template is built with free elements, so nothing arrives watermarked.",
+    q: "How does unlimited work?",
+    a: "Send as many requests as you like. They join one queue and are worked in order, then delivered together in the Monday drop. No credits, no per-post fees.",
+  },
+  {
+    q: "What counts as a request?",
+    a: "One post, carousel or story set. Same listing, different crop, does not count twice. Anything outside social posts, such as flyers or print, is quoted separately.",
+  },
+  {
+    q: "Can I ask for changes?",
+    a: "Yes. Unlimited tweaks within seven days of delivery, sent as one list per asset. After seven days it becomes a new request.",
   },
   {
     q: "Can I use these for client listings?",
-    a: "Yes. The Studio plan includes a commercial licence, so you can use the templates for any listing you represent. You cannot resell or redistribute the template files themselves.",
+    a: "Yes. The subscription includes a commercial licence for any listing you represent. You cannot resell or redistribute the designs themselves.",
   },
   {
     q: "What happens to my price when I cancel?",
-    a: "Cancelling resets the clock. If you come back later, you start again at $25 and the discount builds from there.",
-  },
-  {
-    q: "How often are new templates added?",
-    a: "Ten every month, across the five formats. They appear in your library automatically, and we email you when a drop lands.",
-  },
-  {
-    q: "What is the refund policy?",
-    a: "Seven days, no questions. Email us within seven days of a charge and it is refunded.",
+    a: "Cancelling resets the clock. If you come back later, you start again at the current starting price and the discount builds from there.",
   },
 ];

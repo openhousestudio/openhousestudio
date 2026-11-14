@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/sections/footer";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Terms — Open House Studio" };
 
@@ -11,28 +12,38 @@ export default function TermsPage() {
         <h1 className="display mt-4 text-[clamp(32px,4vw,48px)]">Terms</h1>
         <div className="mt-8 space-y-5 text-[16px] leading-[1.75] text-muted">
           <p>
-            Open House Studio sells editable social media templates and captions on a
-            monthly subscription. Access is personal to the subscriber.
+            Open House Studio is a monthly design service for real estate agents. You send
+            listing details and photos; we send back finished social posts with captions.
+            Access is personal to the subscriber.
           </p>
           <p>
-            The Studio plan includes a commercial licence to use the templates in
-            marketing for listings you represent. You may not resell, redistribute, or
-            share the template files themselves.
+            Requests are unlimited and worked through one queue in the order received, then
+            delivered in the weekly drop, currently Monday. Turnaround is not guaranteed per
+            request, only per drop.
           </p>
           <p>
-            Templates contain original designs. No third-party trademarks, characters, or
-            likenesses are included. You are responsible for the accuracy and legality of
-            the content you publish.
+            The Studio plan includes a commercial licence to use the delivered designs in
+            marketing for listings you represent. You may not resell, redistribute, or share
+            the design files themselves.
           </p>
           <p>
-            Prices start at $25 per month, drop 5% each month of continuous subscription,
-            and never fall below $10. Cancelling resets the price to $25 if you return.
+            Unlimited tweaks are included within seven days of delivery, sent as one list per
+            asset. Changes requested after seven days are treated as new requests.
           </p>
           <p>
-            The founder offer is $9 per month on a recurring monthly subscription. It was
-            offered while the library was still being built and is locked for your first 12
-            months. We will contact you before your price changes. Founder subscriptions are
-            refundable in full on request at any time before launch.
+            Designs contain original artwork. No third-party trademarks, characters, or
+            likenesses are included. You are responsible for the accuracy and legality of the
+            content you publish.
+          </p>
+          <p>
+            Prices start at ${site.price.start} per month, drop 5% each month of continuous
+            subscription, and never fall below ${site.price.floor}. Cancelling resets the
+            price to the current starting price if you return.
+          </p>
+          <p>
+            The founder offer is ${site.founder.price} per month on a recurring monthly
+            subscription and stays at that price for as long as the subscription continues.
+            Founder subscriptions are refundable in full on request at any time before launch.
           </p>
           <p>
             Subscriptions renew automatically each month until cancelled. You can cancel at
