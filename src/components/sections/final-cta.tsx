@@ -113,7 +113,7 @@ export function FinalCta() {
             href={site.founder.checkoutUrl}
             className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-full border border-ink px-6 text-[15px] font-medium text-ink transition-colors hover:bg-ink hover:text-bg"
           >
-            Become a founder — ${site.founder.price}/month
+            Become a founder
             <ArrowRight className="h-4 w-4" aria-hidden />
           </a>
           <p className="mt-3 text-[12px] text-muted">

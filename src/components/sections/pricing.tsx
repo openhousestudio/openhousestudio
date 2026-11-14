@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { priceLadder, site } from "@/lib/site";
 import { Reveal } from "../reveal";
 import { SubscribeButton } from "../subscribe-button";
@@ -55,6 +55,10 @@ export function Pricing() {
                   full library
                 </p>
               </div>
+              <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-bg/20 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-bg/60">
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+                Not on sale yet
+              </p>
               <p className="mt-4 font-sans text-4xl font-semibold tabular-nums">
                 ${site.price.start}
                 <span className="text-lg font-normal text-bg/60">/month today</span>
@@ -88,6 +92,25 @@ export function Pricing() {
               ) : null}
             </div>
           </Reveal>
+        </div>
+
+        <div className="mt-10 rounded-lg border border-accent/40 bg-bg/[0.04] p-6">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-accent">
+            Founder mode
+          </p>
+          <p className="mt-3 max-w-[70ch] text-[15px] leading-[1.7] text-bg/80">
+            The Studio plan at ${site.price.start} is not on sale yet. While the library is
+            still being built, the founder plan is the only way in: $
+            {site.founder.price} a month, locked for your first 12 months. When Studio
+            launches, founders keep their price.
+          </p>
+          <a
+            href={site.founder.checkoutUrl}
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-primary"
+          >
+            Become a founder
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
         </div>
 
         <div className="mt-10 rounded-lg border border-bg/10 p-5">
