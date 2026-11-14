@@ -1,11 +1,11 @@
 export const faqs = [
   {
     q: "What do I need to edit the templates?",
-    a: "A free Figma account. Open the template link, click Duplicate, and the file lands in your own drafts. Edits happen in the browser.",
+    a: "A free Canva account. Open the template link, click Use template, and a copy lands in your own designs. Edits happen in the browser.",
   },
   {
-    q: "Do I need a paid Figma plan?",
-    a: "No. The free plan is enough to duplicate a file and change text and photos.",
+    q: "Do I need a paid Canva plan?",
+    a: "No. A free account can open and edit a template link. Every template is built with free elements, so nothing arrives watermarked.",
   },
   {
     q: "Can I use these for client listings?",

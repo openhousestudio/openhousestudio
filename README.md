@@ -118,7 +118,7 @@ Display type is Fraunces, body is Inter, both via `next/font`.
 ## Swapping in real templates
 
 `src/components/post-preview.tsx` draws the mock posts with HTML and CSS. Replace it with
-image exports from Figma when the real templates exist. Keep the same 4:5 aspect ratio and
+image exports from Canva when the real templates exist. Keep the same 4:5 aspect ratio and
 rounded corner, and the layout will hold.
 
 ## Screenshot tooling
