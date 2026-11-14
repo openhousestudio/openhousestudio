@@ -18,18 +18,14 @@ export function Formats() {
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {formats.map((format, i) => (
           <Reveal key={format.id} delay={i * 0.06}>
-            <div className="group relative h-full overflow-hidden rounded-lg border border-line bg-card p-6 transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:shadow-[0_16px_40px_-24px_rgba(26,23,20,0.45)]">
-              <span
-                aria-hidden
-                className="absolute inset-x-0 top-0 h-[3px] scale-x-0 bg-accent transition-transform duration-300 group-hover:scale-x-100"
-              />
-              <p className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-accent/12 text-[12px] font-semibold tabular-nums text-accent transition-colors group-hover:bg-accent group-hover:text-ink">
+            <div className="h-full rounded-lg border border-line bg-card p-6 shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)]">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-primary">
                 {String(i + 1).padStart(2, "0")}
               </p>
-              <h3 className="mt-5 font-sans text-[17px] font-semibold text-ink">
+              <h3 className="mt-6 font-sans text-[17px] font-semibold text-ink">
                 {format.name}
               </h3>
-              <p className="mt-2 inline-flex rounded-full border border-line px-2.5 py-0.5 text-[12px] font-medium tabular-nums text-ink/70">
+              <p className="mt-1 text-[13px] tabular-nums text-muted">
                 {format.count} templates
               </p>
               <p className="mt-4 text-[14px] leading-[1.6] text-muted">{format.blurb}</p>
