@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { priceLadder, site } from "@/lib/site";
 import { Reveal } from "../reveal";
+import { SubscribeButton } from "../subscribe-button";
 
 export function Pricing() {
   return (
@@ -76,6 +77,12 @@ export function Pricing() {
               >
                 Start free, upgrade later
               </a>
+              <div className="mt-3">
+                <SubscribeButton
+                  label={`Subscribe at $${site.price.start}/month`}
+                  className="inline-flex items-center gap-2 rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg/50 disabled:opacity-70"
+                />
+              </div>
             </div>
           </Reveal>
         </div>

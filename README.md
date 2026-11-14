@@ -27,6 +27,8 @@ src/
 │   ├── layout.tsx            fonts, metadata, icons
 │   ├── globals.css           palette tokens, base type
 │   ├── api/subscribe/route.ts email capture
+│   ├── api/checkout/route.ts  Stripe Checkout Session
+│   ├── api/stripe/webhook/route.ts  signature check, ladder advance
 │   ├── legal/privacy         privacy policy
 │   ├── legal/terms           terms and licence
 │   ├── robots.ts, sitemap.ts
@@ -42,6 +44,38 @@ src/
 │   └── faq.ts
 └── lib/site.ts               brand, nav, price ladder
 ```
+
+## Subscriptions (Stripe Billing)
+
+One Product (`Open House Studio`), one monthly USD Price per ladder rung, lookup key
+`rung_1` … `rung_19`. The ladder is read from `src/lib/site.ts`.
+
+Create the catalog in a sandbox:
+
+```bash
+STRIPE_SECRET_KEY=rk_test_... node scripts/stripe-catalog.mjs
+```
+
+Re-running is safe; existing lookup keys are skipped. Run the same script with a live
+key to build the production catalog.
+
+| Route | Purpose |
+|---|---|
+| `POST /api/checkout` | Creates a subscription Checkout Session at rung 1 |
+| `POST /api/stripe/webhook` | Verifies signatures, advances the ladder |
+
+The ladder advances on `invoice.paid`: the tenure month lives in subscription metadata,
+and the next rung is applied with `proration_behavior: "none"` so the lower price takes
+effect on the following invoice.
+
+Local webhooks:
+
+```bash
+stripe listen --forward-to localhost:3000/api/stripe/webhook
+```
+
+Copy the printed `whsec_...` into `STRIPE_WEBHOOK_SECRET`, then pay with
+`4242 4242 4242 4242`.
 
 ## Email capture
 
