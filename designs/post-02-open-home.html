@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Open home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        width: 1080px; height: 1350px; overflow: hidden;
+        font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+      }
+      .post {
+        position: relative; width: 1080px; height: 1350px;
+        background-image: url("file:///tmp/opencode/photos/interior.jpg");
+        background-size: cover; background-position: center 40%;
+      }
+      .wash {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(26,23,20,0.72) 0%, rgba(26,23,20,0.28) 42%, rgba(26,23,20,0.86) 100%);
+      }
+      .top {
+        position: absolute; left: 72px; right: 72px; top: 72px;
+        display: flex; justify-content: space-between; align-items: baseline;
+        color: #fffcf4;
+      }
+      .top .label { font-size: 18px; letter-spacing: 0.28em; text-transform: uppercase; color: #e9dfcf; }
+      .top .num { font-size: 18px; letter-spacing: 0.16em; color: #e9dfcf; }
+      .day {
+        position: absolute; left: 72px; top: 214px;
+        font-size: 22px; letter-spacing: 0.34em; text-transform: uppercase; color: #c4643f;
+      }
+      .time {
+        position: absolute; left: 66px; top: 330px;
+        font-family: "Fraunces", serif; font-weight: 600; font-size: 196px; line-height: 1;
+        letter-spacing: -0.04em; color: #fffcf4;
+      }
+      .rule { position: absolute; left: 72px; top: 600px; width: 180px; height: 2px; background: #c4643f; }
+      .place {
+        position: absolute; left: 72px; top: 650px;
+        font-family: "Fraunces", serif; font-size: 54px; line-height: 1.15; color: #fffcf4;
+        max-width: 620px;
+      }
+      .note {
+        position: absolute; left: 72px; bottom: 130px;
+        font-size: 22px; color: #e9dfcf;
+      }
+      .agent {
+        position: absolute; right: 72px; bottom: 130px; text-align: right;
+        font-size: 18px; line-height: 1.6; color: #e9dfcf;
+      }
+      .foot {
+        position: absolute; left: 72px; right: 72px; bottom: 72px;
+        border-top: 1px solid rgba(255,252,244,0.25); padding-top: 18px;
+        font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,252,244,0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post">
+      <div class="wash"></div>
+
+      <div class="top">
+        <span class="label">Open home</span>
+        <span class="num">01 / 03</span>
+      </div>
+
+      <p class="day">Saturday</p>
+      <p class="time">11–11:45</p>
+      <div class="rule"></div>
+      <p class="place">Awa Road,<br />Onehunga</p>
+
+      <p class="note">All welcome. No booking.</p>
+      <p class="agent">[Your name]<br />[phone]</p>
+      <p class="foot">Open House Studio</p>
+    </div>
+  </body>
+</html>

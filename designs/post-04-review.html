@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        width: 1080px; height: 1350px; overflow: hidden;
+        font-family: "Inter", system-ui, sans-serif; -webkit-font-smoothing: antialiased;
+        background: #1a1714;
+      }
+      .post { position: relative; width: 1080px; height: 1350px; padding: 88px; }
+      .top {
+        display: flex; justify-content: space-between; align-items: baseline;
+        font-size: 17px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,252,244,0.45);
+      }
+      .top .sample { color: #c4643f; }
+      .mark {
+        margin-top: 230px; font-family: "Fraunces", serif; font-size: 190px; line-height: 0.6;
+        color: #c4643f;
+      }
+      .quote {
+        margin-top: 40px; max-width: 880px;
+        font-family: "Fraunces", serif; font-weight: 400; font-size: 72px; line-height: 1.18;
+        letter-spacing: -0.02em; color: #fffcf4;
+      }
+      .rule { margin-top: 64px; width: 140px; height: 2px; background: #a94f2e; }
+      .who {
+        margin-top: 44px; padding-left: 2px;
+        font-size: 20px; line-height: 1.7; color: rgba(255,252,244,0.55);
+      }
+      .who strong { display: block; font-weight: 500; color: #fffcf4; font-size: 23px; }
+      .foot {
+        position: absolute; right: 88px; bottom: 150px; text-align: right;
+        font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,252,244,0.32);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post">
+      <div class="top">
+        <span>Client review</span>
+        <span class="sample">Sample</span>
+      </div>
+
+      <p class="mark">&ldquo;</p>
+      <p class="quote">[Write the one line your client actually said. Keep it short enough to read in a feed.]</p>
+      <div class="rule"></div>
+
+      <p class="who"><strong>[Client name]</strong>[Suburb] · [Your name]</p>
+      <p class="foot">Open House Studio</p>
+    </div>
+  </body>
+</html>

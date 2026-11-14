@@ -1,5 +1,6 @@
 export type CommunityEntry = {
   slug: string;
+  image: string;
   format: "Listing" | "Open Home" | "Just Sold" | "Review" | "Story";
   suburb: string;
   /** Shown on hover. Replace the placeholders with the agent's real details. */
@@ -20,7 +21,8 @@ export type CommunityEntry = {
  */
 export const community: CommunityEntry[] = [
   {
-    slug: "awa-road-just-listed",
+    slug: "awa-road-listing",
+    image: "/community/post-01-listing.jpg",
     format: "Listing",
     suburb: "Onehunga",
     contact: { name: "[Agent name]", phone: "[phone]" },
@@ -28,7 +30,8 @@ export const community: CommunityEntry[] = [
     example: true,
   },
   {
-    slug: "awa-road-clear",
+    slug: "awa-road-open-home",
+    image: "/community/post-02-open-home.jpg",
     format: "Open Home",
     suburb: "Onehunga",
     contact: { name: "[Agent name]", phone: "[phone]" },
@@ -36,7 +39,8 @@ export const community: CommunityEntry[] = [
     example: true,
   },
   {
-    slug: "awa-road-glass",
+    slug: "awa-road-sold",
+    image: "/community/post-03-just-sold.jpg",
     format: "Just Sold",
     suburb: "Onehunga",
     contact: { name: "[Agent name]", phone: "[phone]" },
@@ -44,37 +48,18 @@ export const community: CommunityEntry[] = [
     example: true,
   },
   {
-    slug: "morningside-review",
+    slug: "client-review",
+    image: "/community/post-04-review.jpg",
     format: "Review",
-    suburb: "Morningside",
+    suburb: "Onehunga",
     contact: { name: "[Agent name]", phone: "[phone]" },
     example: true,
   },
   {
-    slug: "kingsland-story",
+    slug: "onehunga-story",
+    image: "/community/post-05-story.jpg",
     format: "Story",
-    suburb: "Kingsland",
-    contact: { name: "[Agent name]", phone: "[phone]" },
-    example: true,
-  },
-  {
-    slug: "grey-lynn-listing",
-    format: "Listing",
-    suburb: "Grey Lynn",
-    contact: { name: "[Agent name]", phone: "[phone]" },
-    example: true,
-  },
-  {
-    slug: "ponsonby-open-home",
-    format: "Open Home",
-    suburb: "Ponsonby",
-    contact: { name: "[Agent name]", phone: "[phone]" },
-    example: true,
-  },
-  {
-    slug: "eden-terrace-sold",
-    format: "Just Sold",
-    suburb: "Eden Terrace",
+    suburb: "Onehunga",
     contact: { name: "[Agent name]", phone: "[phone]" },
     example: true,
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import {
   community,
   communityFormats,
@@ -23,7 +24,14 @@ function Card({ entry, compact = false }: { entry: CommunityEntry; compact?: boo
         ) : null}
       </figcaption>
 
-      <div className="relative aspect-[4/5] overflow-hidden border border-light/12 bg-[#F7F4EF] transition-colors duration-300 group-hover:border-light/30">
+      <div className="relative overflow-hidden border border-light/12 bg-[#F7F4EF] transition-colors duration-300 group-hover:border-light/30">
+        <Image
+          src={entry.image}
+          alt={`${entry.format} post made for a listing in ${entry.suburb}`}
+          width={1080}
+          height={entry.format === "Story" ? 1920 : 1350}
+          className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+        />
         {featured ? (
           <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 text-[9px] uppercase tracking-[0.16em] text-light backdrop-blur-sm">
             Featured

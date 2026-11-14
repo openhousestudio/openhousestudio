@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { community } from "@/content/community";
 import { Reveal } from "../reveal";
@@ -41,7 +42,15 @@ export function CommunityStrip() {
                   </span>
                   <span className="text-muted/50">View</span>
                 </p>
-                <div className="aspect-[4/5] overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)] transition-all duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-ink/20 group-hover:shadow-[0_20px_40px_-24px_rgba(26,23,20,0.5)]" />
+                <div className="overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)] transition-all duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-ink/20 group-hover:shadow-[0_20px_40px_-24px_rgba(26,23,20,0.5)]">
+                  <Image
+                    src={entry.image}
+                    alt={`${entry.format} post made for a listing in ${entry.suburb}`}
+                    width={1080}
+                    height={entry.format === "Story" ? 1920 : 1350}
+                    className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+                  />
+                </div>
               </a>
             </Reveal>
           ))}
