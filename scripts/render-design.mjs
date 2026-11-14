@@ -39,19 +39,23 @@ try {
   await page.goto(`file://${htmlPath}`, { waitUntil: "networkidle0", timeout: 60000 });
   await page.evaluate(() => document.fonts.ready);
 
-  const height = await page.evaluate(() =>
-    Math.max(
+  const size = await page.evaluate(() => ({
+    width: Math.round(document.body.getBoundingClientRect().width),
+    height: Math.max(
       document.body.scrollHeight,
       document.body.getBoundingClientRect().height,
       document.documentElement.scrollHeight,
     ),
-  );
+  }));
 
-  await page.setViewport({ width: 1080, height, deviceScaleFactor: 2 });
+  await page.setViewport({ width: size.width, height: size.height, deviceScaleFactor: 2 });
   // Give webfonts and background images a beat.
   await new Promise((r) => setTimeout(r, 700));
-  await page.screenshot({ path: outPath, clip: { x: 0, y: 0, width: 1080, height } });
-  console.log(`rendered ${outPath} at 1080x${height} (2x)`);
+  await page.screenshot({
+    path: outPath,
+    clip: { x: 0, y: 0, width: size.width, height: size.height },
+  });
+  console.log(`rendered ${outPath} at ${size.width}x${size.height} (2x)`);
 } finally {
   await browser.close();
 }
