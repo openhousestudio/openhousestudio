@@ -9,7 +9,7 @@ type Body = {
   agentName?: string;
   phone?: string;
   suburb?: string;
-  postUrl?: string;
+  description?: string;
   notes?: string;
 };
 
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
   const agentName = (body.agentName ?? "").trim();
   const phone = (body.phone ?? "").trim();
   const suburb = (body.suburb ?? "").trim();
-  const postUrl = (body.postUrl ?? "").trim();
+  const description = (body.description ?? "").trim();
   const notes = (body.notes ?? "").trim();
   const plan = PLANS.has(body.plan ?? "") ? (body.plan as string) : "week";
   // plan stays URL-safe for the email button; plan_label is the human duration.
@@ -34,9 +34,9 @@ export async function POST(request: Request) {
   if (!EMAIL_RE.test(email)) {
     return NextResponse.json({ error: "Enter a valid email address." }, { status: 400 });
   }
-  if (!agentName || !phone || !suburb) {
+  if (!agentName || !phone || !suburb || !description) {
     return NextResponse.json(
-      { error: "Name, phone and suburb are required." },
+      { error: "Name, phone, suburb and a description are required." },
       { status: 400 },
     );
   }
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   const groupId = process.env.MAILERLITE_FEATURED_GROUP_ID;
 
   if (!apiKey || !groupId) {
-    console.log("[featured] no provider configured", { email, plan, postUrl });
+    console.log("[featured] no provider configured", { email, plan, description });
     return NextResponse.json({ ok: true, mode: "log" });
   }
 
@@ -66,7 +66,7 @@ export async function POST(request: Request) {
           suburb,
           plan,
           plan_label: planLabel,
-          post_url: postUrl,
+          post_description: description,
           notes,
         },
       }),

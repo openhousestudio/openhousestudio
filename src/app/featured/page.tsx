@@ -15,7 +15,6 @@ export default async function FeaturedPage({
 }) {
   const params = await searchParams;
   const plan = params.plan === "month" ? "month" : "week";
-  const offer = site.community[plan];
 
   return (
     <main className="mx-auto max-w-[720px] px-6 pb-24 pt-[120px]">
@@ -34,10 +33,29 @@ export default async function FeaturedPage({
         day.
       </p>
 
-      <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-[13px] text-ink">
-        <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
-        {offer.days} days at the top · ${offer.price} paid
-      </p>
+      <div className="mt-8 flex flex-wrap gap-3">
+        {(["week", "month"] as const).map((key) => {
+          const option = site.community[key];
+          const active = key === plan;
+          return (
+            <p
+              key={key}
+              className={
+                "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[13px] " +
+                (active
+                  ? "border-ink bg-ink text-light"
+                  : "border-line text-muted")
+              }
+            >
+              {active ? (
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+              ) : null}
+              {option.days} days at the top · ${option.price}
+              {active ? " · paid" : ""}
+            </p>
+          );
+        })}
+      </div>
 
       <FeaturedForm plan={plan} />
 

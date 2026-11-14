@@ -13,15 +13,17 @@ export function FeaturedForm({ plan }: { plan: "week" | "month" }) {
     agentName: "",
     phone: "",
     suburb: "",
-    postUrl: "",
+    description: "",
     notes: "",
   });
 
-  const set = (key: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement>) =>
-    setForm((prev) => ({ ...prev, [key]: event.target.value }));
+  const set = (key: Exclude<keyof typeof form, "notes" | "description">) =>
+    (event: React.ChangeEvent<HTMLInputElement>) =>
+      setForm((prev) => ({ ...prev, [key]: event.target.value }));
 
-  const setText = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
-    setForm((prev) => ({ ...prev, notes: event.target.value }));
+  const setText = (key: "notes" | "description") =>
+    (event: React.ChangeEvent<HTMLTextAreaElement>) =>
+      setForm((prev) => ({ ...prev, [key]: event.target.value }));
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -123,18 +125,20 @@ export function FeaturedForm({ plan }: { plan: "week" | "month" }) {
       </div>
 
       <div>
-        <label htmlFor="postUrl" className="label">
-          Link to the post
+        <label htmlFor="description" className="label">
+          Describe the post
         </label>
-        <input
-          id="postUrl"
-          value={form.postUrl}
-          onChange={set("postUrl")}
-          placeholder="Canva, Drive or Instagram link"
-          className={`${field} mt-2`}
+        <textarea
+          id="description"
+          required
+          rows={4}
+          value={form.description}
+          onChange={setText("description")}
+          className="mt-2 w-full rounded-md border border-line bg-card p-4 text-[15px] text-ink placeholder:text-muted/60 focus:border-ink/40 focus:outline-none"
+          placeholder="Just listed, Awa Road, Onehunga. 4 bed 2 bath, exterior photo at golden hour."
         />
         <p className="mt-2 text-[12px] text-muted">
-          No link handy? Send the image in a reply to your confirmation email.
+          Plain words are fine. We&apos;ll ask for images if we need them.
         </p>
       </div>
 
@@ -146,7 +150,7 @@ export function FeaturedForm({ plan }: { plan: "week" | "month" }) {
           id="notes"
           rows={3}
           value={form.notes}
-          onChange={setText}
+          onChange={setText("notes")}
           className="mt-2 w-full rounded-md border border-line bg-card p-4 text-[15px] text-ink placeholder:text-muted/60 focus:border-ink/40 focus:outline-none"
           placeholder="Optional"
         />
