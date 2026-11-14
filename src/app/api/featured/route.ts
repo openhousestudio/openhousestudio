@@ -28,6 +28,7 @@ export async function POST(request: Request) {
   const postUrl = (body.postUrl ?? "").trim();
   const notes = (body.notes ?? "").trim();
   const plan = PLANS.has(body.plan ?? "") ? (body.plan as string) : "week";
+  // plan stays URL-safe for the email button; plan_label is the human duration.
   const planLabel = plan === "month" ? "30 days" : "7 days";
 
   if (!EMAIL_RE.test(email)) {
@@ -63,7 +64,8 @@ export async function POST(request: Request) {
           agent_name: agentName,
           phone,
           suburb,
-          plan: planLabel,
+          plan,
+          plan_label: planLabel,
           post_url: postUrl,
           notes,
         },
