@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import {
   community,
@@ -10,11 +10,19 @@ import {
   type CommunityEntry,
 } from "@/content/community";
 
-function Card({ entry, compact = false }: { entry: CommunityEntry; compact?: boolean }) {
+function Card({
+  entry,
+  compact = false,
+  onOpen,
+}: {
+  entry: CommunityEntry;
+  compact?: boolean;
+  onOpen: (entry: CommunityEntry) => void;
+}) {
   const featured = isFeatured(entry);
 
   return (
-    <figure className="group transition-transform duration-300 ease-out hover:-translate-y-0.5">
+    <figure className="group">
       <figcaption className="mb-2 flex items-baseline justify-between gap-3">
         <span className="text-[10px] uppercase tracking-[0.16em] text-light/50">
           {entry.format} · {entry.suburb}
@@ -24,7 +32,12 @@ function Card({ entry, compact = false }: { entry: CommunityEntry; compact?: boo
         ) : null}
       </figcaption>
 
-      <div className="relative aspect-[4/5] overflow-hidden border border-light/12 bg-[#F7F4EF] transition-colors duration-300 group-hover:border-light/30">
+      <button
+        type="button"
+        onClick={() => onOpen(entry)}
+        aria-label={`Open the ${entry.format} post from ${entry.suburb}`}
+        className="relative block aspect-[4/5] w-full overflow-hidden border border-light/12 bg-[#F7F4EF] text-left transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-light/35 focus-visible:border-light/60"
+      >
         <Image
           src={entry.image}
           alt={`${entry.format} post made for a listing in ${entry.suburb}`}
@@ -38,19 +51,105 @@ function Card({ entry, compact = false }: { entry: CommunityEntry; compact?: boo
           </span>
         ) : null}
 
-        {/* contact bar slides up on hover */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-2 bg-ink/90 px-4 py-3 opacity-0 backdrop-blur-sm transition-all duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-          <p className="text-[11px] uppercase tracking-[0.14em] text-light/50">Agent</p>
-          <p className="mt-1 text-[13px] font-medium text-light">{entry.contact.name}</p>
-          <p className="text-[12px] text-light/70">{entry.contact.phone}</p>
+        <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-ink/90 px-4 py-3 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          <span className="block">
+            <span className="block text-[9px] uppercase tracking-[0.14em] text-light/40">
+              Agent
+            </span>
+            <span className="mt-0.5 block text-[12px] font-medium text-light">
+              {entry.contact.name}
+            </span>
+            <span className="block text-[11px] text-light/60">{entry.contact.phone}</span>
+          </span>
+          <span className="pb-0.5 text-[11px] uppercase tracking-[0.14em] text-light/70">
+            View
+          </span>
+        </span>
+      </button>
+    </figure>
+  );
+}
+
+function Lightbox({
+  entry,
+  onClose,
+}: {
+  entry: CommunityEntry;
+  onClose: () => void;
+}) {
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previous;
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${entry.format} post from ${entry.suburb}`}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/80 p-4 backdrop-blur-md sm:p-8"
+      onClick={onClose}
+    >
+      <div
+        className="flex max-h-full w-full max-w-[1120px] flex-col gap-6 lg:flex-row lg:items-center"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="mx-auto max-h-[78vh] w-auto overflow-hidden border border-light/15 bg-light/5">
+          <Image
+            src={entry.image}
+            alt={`${entry.format} post made for a listing in ${entry.suburb}`}
+            width={1080}
+            height={entry.format === "Story" ? 1920 : 1350}
+            className="h-auto max-h-[78vh] w-auto"
+            priority
+          />
+        </div>
+
+        <div className="w-full shrink-0 lg:w-[300px]">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-accent">
+            {isFeatured(entry) ? "Featured · " : ""}
+            {entry.format}
+          </p>
+          <p className="mt-3 font-[family-name:var(--font-display)] text-[30px] leading-tight text-light">
+            {entry.suburb}
+          </p>
+
+          <div className="mt-6 border-t border-light/15 pt-5">
+            <p className="text-[10px] uppercase tracking-[0.16em] text-light/40">Agent</p>
+            <p className="mt-2 text-[15px] text-light">{entry.contact.name}</p>
+            <p className="text-[14px] text-light/60">{entry.contact.phone}</p>
+          </div>
+
+          {entry.example ? (
+            <p className="mt-6 text-[12px] leading-[1.6] text-light/35">
+              Sample made by the studio, not a real listing.
+            </p>
+          ) : null}
+
+          <button
+            type="button"
+            onClick={onClose}
+            className="mt-8 inline-flex items-center rounded-full border border-light/25 px-5 py-2.5 text-[13px] text-light transition-all duration-200 hover:-translate-y-px hover:border-light/50 active:translate-y-0"
+          >
+            Close
+          </button>
         </div>
       </div>
-    </figure>
+    </div>
   );
 }
 
 export function CommunityGrid() {
   const [filter, setFilter] = useState<string>("All");
+  const [active, setActive] = useState<CommunityEntry | null>(null);
 
   const { featured, free } = useMemo(() => {
     const sorted = sortCommunity(community).filter(
@@ -62,6 +161,7 @@ export function CommunityGrid() {
     };
   }, [filter]);
 
+  const close = useCallback(() => setActive(null), []);
   const total = featured.length + free.length;
 
   if (total === 0) {
@@ -99,7 +199,7 @@ export function CommunityGrid() {
       {featured.length > 0 ? (
         <div className="mt-10 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((entry) => (
-            <Card key={entry.slug} entry={entry} />
+            <Card key={entry.slug} entry={entry} onOpen={setActive} />
           ))}
         </div>
       ) : null}
@@ -107,10 +207,12 @@ export function CommunityGrid() {
       {free.length > 0 ? (
         <div className="mt-12 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
           {free.map((entry) => (
-            <Card key={entry.slug} entry={entry} compact />
+            <Card key={entry.slug} entry={entry} compact onOpen={setActive} />
           ))}
         </div>
       ) : null}
+
+      {active ? <Lightbox entry={active} onClose={close} /> : null}
     </>
   );
 }
