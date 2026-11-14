@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { community } from "@/content/community";
 import { Reveal } from "../reveal";
@@ -30,22 +29,12 @@ export function CommunityStrip() {
           {picks.map((entry, i) => (
             <Reveal key={entry.slug} delay={i * 0.06}>
               <a href="/community" className="group block">
-                <div className="overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)]">
-                  <Image
-                    src={entry.image}
-                    alt={`${entry.format} post made for a listing in ${entry.suburb}`}
-                    width={1080}
-                    height={1350}
-                    className="h-auto w-full transition-transform duration-500 ease-out group-hover:scale-[1.015]"
-                  />
-                </div>
+                <div className="aspect-[4/5] overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)]" />
                 <p className="mt-3 flex items-baseline justify-between border-t border-line pt-2 text-[11px] uppercase tracking-[0.16em] text-muted">
                   <span>
                     {entry.format} · {entry.suburb}
                   </span>
-                  <span className="text-muted/60">
-                    {entry.example ? "Example" : entry.credit}
-                  </span>
+                  <span className="text-muted/60">View</span>
                 </p>
               </a>
             </Reveal>

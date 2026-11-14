@@ -1,9 +1,9 @@
 export type CommunityEntry = {
   slug: string;
-  image: string;
   format: "Listing" | "Open Home" | "Just Sold" | "Review" | "Story";
   suburb: string;
-  credit: string;
+  /** Shown on hover. Replace the placeholders with the agent's real details. */
+  contact: { name: string; phone: string };
   /**
    * Paid placement expires. Set this to an ISO date (YYYY-MM-DD) when the
    * purchase lands: today + 7 days for the week link, today + 30 for the month.
@@ -21,26 +21,23 @@ export type CommunityEntry = {
 export const community: CommunityEntry[] = [
   {
     slug: "awa-road-just-listed",
-    image: "/community/example-01.jpg",
     format: "Listing",
     suburb: "Onehunga",
-    credit: "Example, made by the studio",
+    contact: { name: "[Agent name]", phone: "[phone]" },
     example: true,
   },
   {
     slug: "awa-road-clear",
-    image: "/community/example-02.jpg",
     format: "Open Home",
     suburb: "Onehunga",
-    credit: "Example, made by the studio",
+    contact: { name: "[Agent name]", phone: "[phone]" },
     example: true,
   },
   {
     slug: "awa-road-glass",
-    image: "/community/example-03.jpg",
     format: "Just Sold",
     suburb: "Onehunga",
-    credit: "Example, made by the studio",
+    contact: { name: "[Agent name]", phone: "[phone]" },
     example: true,
   },
 ];
