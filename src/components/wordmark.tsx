@@ -1,12 +1,19 @@
 import { DoorMark } from "./door-mark";
 
-export function Wordmark({ compact = false }: { compact?: boolean }) {
+export function Wordmark({
+  compact = false,
+  tone = "ink",
+}: {
+  compact?: boolean;
+  tone?: "ink" | "light";
+}) {
   return (
     <span className="flex items-center gap-2.5">
       <DoorMark className="h-7 w-7" />
       <span
         className={
-          "text-[13px] font-medium uppercase tracking-[0.18em] text-ink " +
+          "text-[13px] font-medium uppercase tracking-[0.18em] " +
+          (tone === "light" ? "text-light " : "text-ink ") +
           (compact ? "hidden sm:inline" : "")
         }
       >

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Listing 01 — clear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --light: #fffcf4;
+        --primary: #a94f2e;
+        --accent: #c4643f;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        font-family: "Inter", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .post {
+        position: relative;
+        width: 1080px;
+        height: 1350px;
+        background-color: #d8cfc2;
+        background-image: url("file:///tmp/opencode/house.png");
+        background-size: cover;
+        background-position: center 55%;
+      }
+
+      /* top and bottom only — middle of the photo stays untouched */
+      .top-fade {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 320px;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 252, 244, 0.55) 0%,
+          rgba(255, 252, 244, 0.18) 55%,
+          rgba(255, 252, 244, 0) 100%
+        );
+      }
+
+      .bottom-fade {
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 780px;
+        background: linear-gradient(
+          to bottom,
+          rgba(26, 23, 20, 0) 0%,
+          rgba(26, 23, 20, 0.30) 30%,
+          rgba(26, 23, 20, 0.62) 58%,
+          rgba(26, 23, 20, 0.82) 82%,
+          rgba(26, 23, 20, 0.88) 100%
+        );
+      }
+
+      /* top-left: small soft plate, only as big as the text */
+      .head {
+        position: absolute;
+        left: 48px;
+        top: 48px;
+        padding: 20px 26px 24px;
+        border-radius: 26px;
+        -webkit-backdrop-filter: blur(14px) saturate(1.1);
+        backdrop-filter: blur(14px) saturate(1.1);
+        background: rgba(255, 252, 244, 0.10);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 10px 30px -18px rgba(26, 23, 20, 0.45);
+      }
+
+      .eyebrow {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: var(--primary);
+      }
+
+      .headline {
+        margin-top: 10px;
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 1.04;
+        letter-spacing: -0.02em;
+        color: #1a1714;
+      }
+
+      /* bottom block: price, agent, then the list */
+      .foot {
+        position: absolute;
+        left: 64px;
+        right: 64px;
+        bottom: 64px;
+        color: var(--light);
+      }
+
+      .price {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 600;
+        font-size: 76px;
+        line-height: 1;
+        letter-spacing: -0.01em;
+        color: var(--light);
+      }
+
+      .agent {
+        margin-top: 14px;
+        font-size: 24px;
+        font-weight: 500;
+        color: rgba(255, 252, 244, 0.78);
+      }
+
+      .list {
+        margin-top: 30px;
+        border-top: 1px solid rgba(255, 252, 244, 0.24);
+      }
+
+      .row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding: 16px 4px;
+        font-size: 25px;
+        color: rgba(255, 252, 244, 0.72);
+      }
+
+      .row + .row { border-top: 1px solid rgba(255, 252, 244, 0.14); }
+
+      .row .value {
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+        color: var(--light);
+      }
+
+      .mark {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 34px;
+        height: 34px;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post">
+      <div class="top-fade"></div>
+      <div class="bottom-fade"></div>
+
+      <div class="head">
+        <p class="eyebrow">Just listed</p>
+        <h1 class="headline">14 Awa Road</h1>
+      </div>
+
+      <div class="foot">
+        <p class="price">$1,240,000</p>
+        <p class="agent">[Your name] · [phone]</p>
+
+        <div class="list">
+          <div class="row">
+            <span>Bedrooms</span>
+            <span class="value">4</span>
+          </div>
+          <div class="row">
+            <span>Bathrooms</span>
+            <span class="value">2</span>
+          </div>
+          <div class="row">
+            <span>Garage</span>
+            <span class="value">2</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
+</html>

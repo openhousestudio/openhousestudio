@@ -7,6 +7,7 @@ import { Formats } from "@/components/sections/formats";
 import { How } from "@/components/sections/how";
 import { Pricing } from "@/components/sections/pricing";
 import { Faq } from "@/components/sections/faq";
+import { CommunityStrip } from "@/components/sections/community-strip";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Formats />
         <How />
         <Pricing />
+        <CommunityStrip />
         <Faq />
         <FinalCta />
       </main>

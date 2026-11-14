@@ -15,6 +15,7 @@ export const site = {
   dropDay: "Monday",
   nav: [
     { label: "Formats", href: "#formats" },
+    { label: "Community", href: "/community" },
     { label: "How it works", href: "#how" },
     { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },

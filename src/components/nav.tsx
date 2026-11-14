@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 import { Wordmark } from "./wordmark";
 
-export function Nav() {
+export function Nav({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [scrolled, setScrolled] = useState(false);
+  const dark = variant === "dark";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -19,21 +20,32 @@ export function Nav() {
       className={
         "fixed inset-x-0 top-0 z-50 h-[76px] transition-colors duration-300 " +
         (scrolled
-          ? "border-b border-line bg-bg/90 backdrop-blur-md"
+          ? dark
+            ? "border-b border-light/10 bg-ink/90 backdrop-blur-md"
+            : "border-b border-line bg-bg/90 backdrop-blur-md"
           : "border-b border-transparent bg-transparent")
       }
     >
       <div className="mx-auto flex h-full max-w-[1280px] items-center justify-between px-6 lg:px-8">
-        <a href="#top" aria-label="Open House Studio, back to top">
-          <Wordmark />
+        <a
+          href="/"
+          aria-label="Open House Studio, back to home"
+          className={dark ? "text-light" : "text-ink"}
+        >
+          <Wordmark tone={dark ? "light" : "ink"} />
         </a>
 
         <nav aria-label="Sections" className="hidden items-center gap-8 md:flex">
           {site.nav.map((item) => (
             <a
               key={item.href}
-              href={item.href}
-              className="text-[15px] text-ink/80 transition-colors hover:text-primary"
+              href={item.href.startsWith("#") ? `/${item.href}` : item.href}
+              className={
+                "text-[15px] transition-colors " +
+                (dark
+                  ? "text-light/75 hover:text-light"
+                  : "text-ink/80 hover:text-primary")
+              }
             >
               {item.label}
             </a>
@@ -41,8 +53,13 @@ export function Nav() {
         </nav>
 
         <a
-          href="#free"
-          className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-light transition-colors hover:bg-primary-hover"
+          href="/#free"
+          className={
+            "rounded-full px-5 py-2.5 text-sm font-medium transition-colors " +
+            (dark
+              ? "border border-light/25 text-light hover:border-light/50"
+              : "bg-primary text-light hover:bg-primary-hover")
+          }
         >
           Start free
         </a>
