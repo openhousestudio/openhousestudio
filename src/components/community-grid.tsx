@@ -24,11 +24,11 @@ function Card({
   return (
     <figure className="group">
       <figcaption className="mb-2 flex items-baseline justify-between gap-3">
-        <span className="text-[11px] uppercase tracking-[0.16em] text-light/70">
+        <span className="text-[10px] uppercase tracking-[0.16em] text-light/50">
           {entry.format} · {entry.suburb}
         </span>
         {entry.example && !compact ? (
-          <span className="text-[12px] text-light/75">Example</span>
+          <span className="text-[10px] text-light/30">Example</span>
         ) : null}
       </figcaption>
 
@@ -46,20 +46,20 @@ function Card({
           className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
         />
         {featured ? (
-          <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 text-[11px] uppercase tracking-[0.16em] text-light backdrop-blur-sm">
+          <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 text-[9px] uppercase tracking-[0.16em] text-light backdrop-blur-sm">
             Featured
           </span>
         ) : null}
 
         <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 bg-ink/90 px-4 py-3 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
           <span className="block">
-            <span className="block text-[11px] uppercase tracking-[0.14em] text-light/70">
+            <span className="block text-[9px] uppercase tracking-[0.14em] text-light/40">
               Agent
             </span>
             <span className="mt-0.5 block text-[12px] font-medium text-light">
               {entry.contact.name}
             </span>
-            <span className="block text-[12px] text-light/75">{entry.contact.phone}</span>
+            <span className="block text-[11px] text-light/60">{entry.contact.phone}</span>
           </span>
           <span className="pb-0.5 text-[11px] uppercase tracking-[0.14em] text-light/70">
             View
@@ -123,13 +123,13 @@ function Lightbox({
           </p>
 
           <div className="mt-6 border-t border-light/15 pt-5">
-            <p className="text-[11px] uppercase tracking-[0.16em] text-light/70">Agent</p>
+            <p className="text-[10px] uppercase tracking-[0.16em] text-light/40">Agent</p>
             <p className="mt-2 text-[15px] text-light">{entry.contact.name}</p>
-            <p className="text-[14px] text-light/75">{entry.contact.phone}</p>
+            <p className="text-[14px] text-light/60">{entry.contact.phone}</p>
           </div>
 
           {entry.example ? (
-            <p className="mt-6 text-[12px] leading-[1.6] text-light/60">
+            <p className="mt-6 text-[12px] leading-[1.6] text-light/35">
               Sample made by the studio, not a real listing.
             </p>
           ) : null}
@@ -166,7 +166,7 @@ export function CommunityGrid() {
 
   if (total === 0) {
     return (
-      <p className="mt-16 max-w-[46ch] text-[15px] leading-[1.7] text-light/70">
+      <p className="mt-16 max-w-[46ch] text-[15px] leading-[1.7] text-light/50">
         Nothing here yet. Posts appear once the agent who paid for one says yes.
       </p>
     );
@@ -191,7 +191,7 @@ export function CommunityGrid() {
             {format}
           </button>
         ))}
-        <span className="ml-auto text-[11px] uppercase tracking-[0.16em] text-light/60">
+        <span className="ml-auto text-[11px] uppercase tracking-[0.16em] text-light/30">
           {total} {total === 1 ? "post" : "posts"}
         </span>
       </div>

@@ -1,32 +1,52 @@
+"use client";
+
+import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { formats } from "@/content/formats";
 import { Glow } from "../glow";
 import { PostPreview } from "../post-preview";
 
+const lines = ["Post like", "your listing", "deserves it."];
+
 export function Hero() {
+  const reduce = useReducedMotion();
+
+  const rise = (i: number) =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, y: 40, filter: "blur(8px)" },
+          animate: { opacity: 1, y: 0, filter: "blur(0px)" },
+          transition: { duration: 0.9, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as const },
+        };
+
   return (
-    <section
-      id="top"
-      className="relative overflow-hidden pb-16 pt-[112px] md:pb-24 md:pt-[140px]"
-    >
+    <section id="top" className="relative overflow-hidden pb-16 pt-[112px] md:pb-24 md:pt-[140px]">
       <Glow />
 
       <div className="relative mx-auto grid max-w-[1280px] gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-8 lg:px-8">
         <div>
-          <p className="label">Unlimited posts for agents</p>
+          <motion.p className="label" {...rise(0)}>
+            Unlimited posts for agents
+          </motion.p>
 
           <h1 className="display mt-5 text-[clamp(44px,6vw,88px)] text-ink">
-            <span className="block">Post like</span>
-            <span className="block">your listing</span>
-            <span className="block">deserves it.</span>
+            {lines.map((line, i) => (
+              <motion.span key={line} className="block" {...rise(i + 1)}>
+                {line}
+              </motion.span>
+            ))}
           </h1>
 
-          <p className="mt-7 max-w-[46ch] text-[18px] leading-[1.65] text-muted">
+          <motion.p
+            className="mt-7 max-w-[46ch] text-[18px] leading-[1.65] text-muted"
+            {...rise(4)}
+          >
             Send us your listing and we send back the posts. Unlimited requests, every
             caption written, one drop every Monday. Your price drops every month you stay.
-          </p>
+          </motion.p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <motion.div className="mt-9 flex flex-wrap items-center gap-3" {...rise(5)}>
             <a
               href="#free"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0"
@@ -40,19 +60,59 @@ export function Hero() {
             >
               See how pricing works
             </a>
-          </div>
+          </motion.div>
 
-          <p className="mt-8 text-[13px] text-muted">
+          <motion.p className="mt-8 text-[13px] text-muted" {...rise(6)}>
             Unlimited requests · Monday drops · captions included · no design skills
-          </p>
+          </motion.p>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[320px] sm:max-w-[360px]">
-          <div className="relative aspect-[4/5]">
-            <PostPreview post={formats[3].post} format={formats[3].name} />
-          </div>
+        <div className="relative mx-auto h-[440px] w-full max-w-[440px] sm:h-[490px] lg:h-[540px]">
+          <motion.div
+            className="absolute inset-0"
+            initial={reduce ? false : { opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {/* back cards, mostly hidden, for depth */}
+            <div className="absolute left-[1%] top-[21%] z-10 w-[205px] -rotate-[13deg] opacity-55 sm:w-[220px]">
+              <PostPreview post={formats[0].post} format={formats[0].name} />
+            </div>
+            <div className="absolute left-[46%] top-[13%] z-10 w-[195px] rotate-[12deg] opacity-55 sm:w-[210px]">
+              <PostPreview post={formats[4].post} format={formats[4].name} />
+            </div>
+
+            {/* front card */}
+            <FloatCard className="absolute left-[17%] top-[13%] z-20 w-[240px] rotate-[1.5deg] sm:w-[255px]" reduce={!!reduce}>
+              <PostPreview post={formats[3].post} format={formats[3].name} />
+            </FloatCard>
+          </motion.div>
         </div>
       </div>
     </section>
+  );
+}
+
+function FloatCard({
+  children,
+  className,
+  reduce,
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  className: string;
+  reduce: boolean;
+  delay?: number;
+}) {
+  if (reduce) return <div className={className}>{children}</div>;
+
+  return (
+    <motion.div
+      className={className}
+      animate={{ y: [0, -10, 0] }}
+      transition={{ duration: 6, delay, repeat: Infinity, ease: "easeInOut" }}
+    >
+      {children}
+    </motion.div>
   );
 }

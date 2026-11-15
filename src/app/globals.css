@@ -4,11 +4,11 @@
   --color-bg: #f7f4ef;
   --color-ink: #1a1714;
   --color-card: #fffdfa;
-  --color-muted: #57504a;
+  --color-muted: #6b6156;
   --color-line: #e4dcd1;
   --color-primary: #a94f2e;
   --color-primary-hover: #8f3f22;
-  --color-accent: #c86642;
+  --color-accent: #c4643f;
   --color-sand: #e9dfcf;
   --color-light: #fffcf4;
 
@@ -23,7 +23,6 @@
   }
 
   body {
-    text-wrap: pretty;
     background-color: var(--color-bg);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -36,18 +35,8 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-primary);
     outline-offset: 3px;
-  }
-
-  a:focus-visible,
-  button:focus-visible,
-  summary:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 3px;
-    border-radius: 4px;
   }
 }
 

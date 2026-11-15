@@ -61,7 +61,7 @@ export function FeaturedForm({ plan }: { plan: "week" | "month" }) {
   }
 
   const field =
-    "h-12 w-full rounded-md border border-line bg-card px-4 text-[15px] text-ink placeholder:text-muted focus:border-ink/50";
+    "h-12 w-full rounded-md border border-line bg-card px-4 text-[15px] text-ink placeholder:text-muted/60 focus:border-ink/40 focus:outline-none";
 
   return (
     <form onSubmit={onSubmit} className="mt-10 space-y-4">
@@ -134,7 +134,7 @@ export function FeaturedForm({ plan }: { plan: "week" | "month" }) {
           rows={4}
           value={form.description}
           onChange={setText("description")}
-          className="mt-2 w-full rounded-md border border-line bg-card p-4 text-[15px] text-ink placeholder:text-muted focus:border-ink/50"
+          className="mt-2 w-full rounded-md border border-line bg-card p-4 text-[15px] text-ink placeholder:text-muted/60 focus:border-ink/40 focus:outline-none"
           placeholder="Just listed, Awa Road, Onehunga. 4 bed 2 bath, exterior photo at golden hour."
         />
         <p className="mt-2 text-[12px] text-muted">
@@ -151,7 +151,7 @@ export function FeaturedForm({ plan }: { plan: "week" | "month" }) {
           rows={3}
           value={form.notes}
           onChange={setText("notes")}
-          className="mt-2 w-full rounded-md border border-line bg-card p-4 text-[15px] text-ink placeholder:text-muted focus:border-ink/50"
+          className="mt-2 w-full rounded-md border border-line bg-card p-4 text-[15px] text-ink placeholder:text-muted/60 focus:border-ink/40 focus:outline-none"
           placeholder="Optional"
         />
       </div>

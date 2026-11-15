@@ -17,8 +17,13 @@ export function PostPreview({
         className
       )}
     >
+      {/* decorative arch, like a doorway */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-16 -top-16 h-56 w-40 rounded-t-full bg-sand/70"
+      />
       <div className="relative">
-        <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-primary">
+        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-primary">
           {post.kicker}
         </p>
         <p className="display mt-3 text-[26px] leading-[1.05] text-ink">{post.title}</p>
@@ -32,7 +37,7 @@ export function PostPreview({
         </p>
       </div>
 
-      <span className="absolute bottom-3 right-4 text-[11px] uppercase tracking-[0.14em] text-muted">
+      <span className="absolute bottom-3 right-4 text-[9px] uppercase tracking-[0.14em] text-muted/70">
         {format}
       </span>
     </div>

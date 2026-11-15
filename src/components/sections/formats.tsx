@@ -20,7 +20,7 @@ export function Formats() {
         {formats.map((format, i) => (
           <Reveal key={format.id} delay={i * 0.06}>
             <div className="group h-full rounded-lg border border-line bg-card p-6 shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:border-accent/50 hover:shadow-[0_22px_45px_-22px_rgba(196,100,63,0.38)]">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-primary transition-colors duration-300 group-hover:text-primary">
+              <p className="text-[11px] uppercase tracking-[0.16em] text-primary transition-colors duration-300 group-hover:text-accent">
                 {String(i + 1).padStart(2, "0")}
               </p>
               <h3 className="mt-6 font-sans text-[17px] font-semibold text-ink">

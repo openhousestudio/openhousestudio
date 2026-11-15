@@ -16,7 +16,7 @@ export function Faq() {
           {faqs.map((item, i) => (
             <Reveal key={item.q} delay={i * 0.04}>
               <details className="group py-5">
-                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-6 py-2 text-[16px] font-medium text-ink marker:hidden">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-[16px] font-medium text-ink marker:hidden">
                   {item.q}
                   <span
                     aria-hidden

@@ -41,7 +41,7 @@ export function SubscribeButton({
         <ArrowRight className="h-4 w-4" aria-hidden />
       </button>
       {state === "error" ? (
-        <p className="mt-2 text-[13px] text-bg/75" role="alert">
+        <p className="mt-2 text-[13px] text-bg/60" role="alert">
           Checkout did not open. Try again in a moment.
         </p>
       ) : null}
