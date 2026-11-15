@@ -24,7 +24,7 @@ export default function CommunityPage() {
               Real posts, real listings.
             </h1>
 
-            <p className="mt-7 max-w-[52ch] text-[17px] leading-[1.7] text-light/60">
+            <p className="mt-7 max-w-[52ch] text-[17px] leading-[1.7] text-light/70">
               Every post here was made for an agent, then published by them. Nothing is
               invented, and nobody is shown without asking first.
             </p>
@@ -42,7 +42,7 @@ export default function CommunityPage() {
               <h2 className="display mt-4 max-w-[24ch] text-[clamp(30px,4vw,52px)] text-light">
                 Want yours in the grid?
               </h2>
-              <p className="mt-5 max-w-[46ch] text-[16px] leading-[1.7] text-light/60">
+              <p className="mt-5 max-w-[46ch] text-[16px] leading-[1.7] text-light/70">
                 Being listed is free, for as long as you want. If you want your post at the
                 top, buy placement: {site.community.week.days} days for $
                 {site.community.week.price}, or {site.community.month.days} days for $
@@ -74,7 +74,7 @@ export default function CommunityPage() {
         </section>
 
         <footer className="border-t border-light/12">
-          <div className="mx-auto flex max-w-[1280px] flex-col gap-3 px-6 py-10 text-[12px] text-light/40 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <div className="mx-auto flex max-w-[1280px] flex-col gap-3 px-6 py-10 text-[12px] text-light/65 sm:flex-row sm:items-center sm:justify-between lg:px-8">
             <p>© 2026 Open House Studio · New Zealand</p>
             <div className="flex gap-6">
               <a href="/" className="hover:text-light">

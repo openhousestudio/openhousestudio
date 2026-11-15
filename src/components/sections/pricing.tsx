@@ -24,7 +24,7 @@ export function Pricing() {
         <div className="mt-12 grid gap-5 lg:grid-cols-2">
           <Reveal>
             <div className="h-full rounded-xl border border-bg/15 p-8">
-              <p className="text-[11px] uppercase tracking-[0.16em] text-bg/60">Free</p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-bg/75">Free</p>
               <p className="mt-4 font-sans text-4xl font-semibold tabular-nums">$0</p>
               <ul className="mt-7 space-y-3 text-[15px] text-bg/80">
                 {[
@@ -40,7 +40,7 @@ export function Pricing() {
               </ul>
               <a
                 href="#free"
-                className="mt-8 inline-flex rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg/50"
+                className="mt-8 inline-flex rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 Get the five
               </a>
@@ -51,17 +51,17 @@ export function Pricing() {
             <div className="h-full rounded-xl border border-accent bg-bg/[0.04] p-8">
               <div className="flex items-center justify-between">
                 <p className="text-[11px] uppercase tracking-[0.16em] text-accent">Studio</p>
-                <p className="text-[11px] uppercase tracking-[0.16em] text-bg/50">
+                <p className="text-[11px] uppercase tracking-[0.16em] text-bg/75">
                   unlimited
                 </p>
               </div>
-              <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-bg/20 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-bg/60">
+              <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-bg/20 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-bg/75">
                 <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
                 Not on sale yet
               </p>
               <p className="mt-4 font-sans text-4xl font-semibold tabular-nums">
                 ${site.price.start}
-                <span className="text-lg font-normal text-bg/60">/month today</span>
+                <span className="text-lg font-normal text-bg/75">/month today</span>
               </p>
               <ul className="mt-7 space-y-3 text-[15px] text-bg/80">
                 {[
@@ -79,7 +79,7 @@ export function Pricing() {
               </ul>
               <a
                 href="#free"
-                className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-primary"
+                className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light"
               >
                 Start free, upgrade later
               </a>
@@ -114,7 +114,7 @@ export function Pricing() {
         </div>
 
         <div className="mt-10 rounded-lg border border-bg/10 p-5">
-          <p className="text-[11px] uppercase tracking-[0.16em] text-bg/50">
+          <p className="text-[11px] uppercase tracking-[0.16em] text-bg/75">
             The price ladder
           </p>
           <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-sans text-[13px] tabular-nums text-bg/70">
@@ -125,7 +125,7 @@ export function Pricing() {
               </span>
             ))}
           </div>
-          <p className="mt-3 text-[12px] text-bg/45">
+          <p className="mt-3 text-[12px] text-bg/65">
             Month one to month twelve. Then it stays at ${site.price.floor}.
           </p>
         </div>

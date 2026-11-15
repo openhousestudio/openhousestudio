@@ -1,10 +1,10 @@
 import { Reveal } from "../reveal";
 
 const steps = [
-  { title: "Send the details", body: "Address, price and photos. One short form, no back and forth." },
-  { title: "We design it", body: "Posts and captions in your brand, across any format you need." },
+  { title: "Send the listing", body: "Address, price and photos. One short form, no back and forth." },
+  { title: "We design the posts", body: "Posts and captions in your brand, across any format you need." },
   { title: "Monday drop", body: "Everything lands in one batch, ready to post all week." },
-  { title: "Tweak it", body: "Unlimited tweaks for seven days after delivery, sent as one list." },
+  { title: "Tweak the post", body: "Unlimited tweaks for seven days after delivery, sent as one list." },
 ];
 
 export function How() {
@@ -28,7 +28,7 @@ export function How() {
               <li className="relative">
                 <span
                   aria-hidden
-                  className="absolute -left-[41px] top-1 flex h-5 w-5 items-center justify-center rounded-full border border-line bg-bg text-[10px] tabular-nums text-primary"
+                  className="absolute -left-[33px] top-1 flex h-5 w-5 items-center justify-center rounded-full border border-line bg-bg text-[11px] tabular-nums text-primary"
                 >
                   {i + 1}
                 </span>

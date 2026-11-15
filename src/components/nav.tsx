@@ -35,7 +35,7 @@ export function Nav({ variant = "light" }: { variant?: "light" | "dark" }) {
           <Wordmark tone={dark ? "light" : "ink"} />
         </a>
 
-        <nav aria-label="Sections" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Sections" className="hidden items-center gap-7 lg:flex">
           {site.nav.map((item) => (
             <a
               key={item.href}

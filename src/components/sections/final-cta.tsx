@@ -65,19 +65,24 @@ export function FinalCta() {
             onSubmit={onSubmit}
             className="mx-auto mt-8 flex w-full max-w-[480px] flex-col gap-3 sm:flex-row"
           >
-            <label htmlFor="email" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="email"
-              type="email"
-              required
-              autoComplete="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@youragency.com"
-              className="h-12 flex-1 rounded-full border border-line bg-card px-5 text-[15px] text-ink placeholder:text-muted/70"
-            />
+            <div className="flex flex-1 flex-col text-left">
+              <label
+                htmlFor="email"
+                className="mb-1.5 pl-5 text-[12px] font-medium text-muted"
+              >
+                Email address
+              </label>
+              <input
+                id="email"
+                type="email"
+                required
+                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@youragency.com"
+                className="h-12 w-full rounded-full border border-line bg-card px-5 text-[15px] text-ink placeholder:text-muted"
+              />
+            </div>
             <button
               type="submit"
               disabled={state === "sending"}
@@ -101,7 +106,7 @@ export function FinalCta() {
         </p>
 
         <div className="mx-auto mt-14 max-w-[480px] border-t border-line pt-10">
-          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-primary">
             Founder offer
           </p>
           <p className="mt-3 text-[16px] leading-[1.7] text-ink">
