@@ -13,7 +13,7 @@ export function PostPreview({
   return (
     <div
       className={clsx(
-        "relative flex aspect-[4/5] w-full flex-col justify-between overflow-hidden rounded-sm bg-light p-5 shadow-[0_18px_50px_-24px_rgba(26,23,20,0.35)] ring-1 ring-line",
+        "relative flex aspect-[4/5] w-full flex-col justify-between overflow-hidden rounded-sm bg-light p-5 shadow-[0_18px_50px_-24px_rgba(26,23,20,0.35)] ring-1 ring-line transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_34px_80px_-32px_rgba(26,23,20,0.5)]",
         className
       )}
     >

@@ -81,7 +81,7 @@ export function FinalCta() {
             <button
               type="submit"
               disabled={state === "sending"}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-[15px] font-medium text-light transition-colors hover:bg-primary-hover disabled:opacity-60"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-[15px] font-medium text-light transition-all duration-150 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0 active:scale-[0.985] disabled:opacity-60"
             >
               {state === "sending" ? "Sending" : "Send them"}
               <ArrowRight className="h-4 w-4" aria-hidden />

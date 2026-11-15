@@ -1,5 +1,6 @@
 import { Check, ArrowRight } from "lucide-react";
-import { priceLadder, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { PriceLadder } from "../price-ladder";
 import { Reveal } from "../reveal";
 import { SubscribeButton } from "../subscribe-button";
 
@@ -40,7 +41,7 @@ export function Pricing() {
               </ul>
               <a
                 href="#free"
-                className="mt-8 inline-flex rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-colors hover:border-bg/50"
+                className="mt-8 inline-flex rounded-full border border-bg/25 px-6 py-3 text-sm font-medium text-bg transition-all duration-150 hover:-translate-y-px hover:border-bg/50 active:translate-y-0 active:scale-[0.985]"
               >
                 Get the five
               </a>
@@ -79,7 +80,7 @@ export function Pricing() {
               </ul>
               <a
                 href="#free"
-                className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-primary"
+                className="mt-8 inline-flex rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-all duration-150 hover:-translate-y-px hover:bg-primary active:translate-y-0 active:scale-[0.985]"
               >
                 Start free, upgrade later
               </a>
@@ -106,28 +107,15 @@ export function Pricing() {
           </p>
           <a
             href={site.founder.checkoutUrl}
-            className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-primary"
+            className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-ink transition-all duration-150 hover:-translate-y-px hover:bg-primary active:translate-y-0 active:scale-[0.985]"
           >
             Become a founder
             <ArrowRight className="h-4 w-4" aria-hidden />
           </a>
         </div>
 
-        <div className="mt-10 rounded-lg border border-bg/10 p-5">
-          <p className="text-[11px] uppercase tracking-[0.16em] text-bg/50">
-            The price ladder
-          </p>
-          <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 font-sans text-[13px] tabular-nums text-bg/70">
-            {priceLadder.map((price, i) => (
-              <span key={i}>
-                {price}
-                {i < priceLadder.length - 1 ? " ·" : ""}
-              </span>
-            ))}
-          </div>
-          <p className="mt-3 text-[12px] text-bg/45">
-            Month one to month twelve. Then it stays at ${site.price.floor}.
-          </p>
+        <div className="mt-10">
+          <PriceLadder />
         </div>
       </div>
     </section>

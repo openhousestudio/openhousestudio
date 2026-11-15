@@ -43,7 +43,7 @@ function Card({
           alt={`${entry.format} post made for a listing in ${entry.suburb}`}
           width={1080}
           height={entry.format === "Story" ? 1920 : 1350}
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+          className="h-full w-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.045]"
         />
         {featured ? (
           <span className="absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 text-[9px] uppercase tracking-[0.16em] text-light backdrop-blur-sm">

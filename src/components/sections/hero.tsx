@@ -30,7 +30,7 @@ export function Hero() {
             Unlimited posts for agents
           </motion.p>
 
-          <h1 className="display mt-5 text-[clamp(44px,6vw,88px)] text-ink">
+          <h1 className="display mt-5 text-balance text-[clamp(38px,6.4vw,88px)] text-ink">
             {lines.map((line, i) => (
               <motion.span key={line} className="block" {...rise(i + 1)}>
                 {line}
@@ -39,7 +39,7 @@ export function Hero() {
           </h1>
 
           <motion.p
-            className="mt-7 max-w-[46ch] text-[18px] leading-[1.65] text-muted"
+            className="mt-6 max-w-[46ch] text-[16px] leading-[1.6] text-muted sm:mt-7 sm:text-[18px] sm:leading-[1.65]"
             {...rise(4)}
           >
             Send us your listing and we send back the posts. Unlimited requests, every
@@ -49,14 +49,14 @@ export function Hero() {
           <motion.div className="mt-9 flex flex-wrap items-center gap-3" {...rise(5)}>
             <a
               href="#free"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0 active:scale-[0.985]"
             >
               Get 5 free templates
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center rounded-full border border-line px-6 py-3.5 text-[15px] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:border-ink/30 active:translate-y-0"
+              className="inline-flex items-center rounded-full border border-line px-6 py-3.5 text-[15px] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:border-ink/30 active:translate-y-0 active:scale-[0.985]"
             >
               See how pricing works
             </a>
