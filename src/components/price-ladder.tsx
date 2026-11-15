@@ -12,6 +12,7 @@ export function PriceLadder() {
   const price = priceLadder[index];
   const month = index + 1;
   const atFloor = index === priceLadder.length - 1;
+  const savings = site.price.start - price;
 
   return (
     <div className="rounded-lg border border-bg/10 p-5">
@@ -22,6 +23,11 @@ export function PriceLadder() {
           </p>
           <p className="mt-3 font-sans text-[15px] text-bg/70">
             {atFloor ? "The floor. It stays here." : `Month ${month} of ${priceLadder.length}`}
+          </p>
+          <p className="mt-1 font-sans text-[13px] text-bg/50">
+            {savings > 0
+              ? `$${savings} less than month one`
+              : "Full price for the first month"}
           </p>
         </div>
 

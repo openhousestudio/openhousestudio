@@ -46,17 +46,17 @@ export function Hero() {
             caption written, one drop every Monday. Your price drops every month you stay.
           </motion.p>
 
-          <motion.div className="mt-9 flex flex-wrap items-center gap-3" {...rise(5)}>
+          <motion.div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center" {...rise(5)}>
             <a
               href="#free"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0 active:scale-[0.985]"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0 active:scale-[0.985] sm:w-auto"
             >
-              Get 5 free templates
+              Start free
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center rounded-full border border-line px-6 py-3.5 text-[15px] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:border-ink/30 active:translate-y-0 active:scale-[0.985]"
+              className="inline-flex min-h-11 items-center px-1 text-[14px] font-medium text-muted underline decoration-line decoration-1 underline-offset-4 transition-colors hover:text-ink"
             >
               See how pricing works
             </a>

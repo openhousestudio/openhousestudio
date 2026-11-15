@@ -21,20 +21,20 @@ export function Footer() {
 
           <div>
             <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Product</p>
-            <ul className="mt-4 space-y-2 text-[14px] text-ink/80">
-              <li><a href="#formats" className="hover:text-primary">Formats</a></li>
-              <li><a href="#how" className="hover:text-primary">How it works</a></li>
-              <li><a href="#pricing" className="hover:text-primary">Pricing</a></li>
-              <li><a href="#free" className="hover:text-primary">Free templates</a></li>
+            <ul className="mt-3 space-y-1 text-[14px] text-ink/80">
+              <li><a href="#formats" className="inline-flex min-h-11 items-center hover:text-primary">Formats</a></li>
+              <li><a href="#how" className="inline-flex min-h-11 items-center hover:text-primary">How it works</a></li>
+              <li><a href="#pricing" className="inline-flex min-h-11 items-center hover:text-primary">Pricing</a></li>
+              <li><a href="#free" className="inline-flex min-h-11 items-center hover:text-primary">Free templates</a></li>
             </ul>
           </div>
 
           <div>
             <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Company</p>
-            <ul className="mt-4 space-y-2 text-[14px] text-ink/80">
-              <li><a href="#faq" className="hover:text-primary">FAQ</a></li>
+            <ul className="mt-3 space-y-1 text-[14px] text-ink/80">
+              <li><a href="#faq" className="inline-flex min-h-11 items-center hover:text-primary">FAQ</a></li>
               <li>
-                <a href={`mailto:${site.email}`} className="hover:text-primary">
+                <a href={`mailto:${site.email}`} className="inline-flex min-h-11 items-center hover:text-primary">
                   Support
                 </a>
               </li>
@@ -43,9 +43,9 @@ export function Footer() {
 
           <div>
             <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Legal</p>
-            <ul className="mt-4 space-y-2 text-[14px] text-ink/80">
-              <li><a href="/legal/privacy" className="hover:text-primary">Privacy</a></li>
-              <li><a href="/legal/terms" className="hover:text-primary">Terms</a></li>
+            <ul className="mt-3 space-y-1 text-[14px] text-ink/80">
+              <li><a href="/legal/privacy" className="inline-flex min-h-11 items-center hover:text-primary">Privacy</a></li>
+              <li><a href="/legal/terms" className="inline-flex min-h-11 items-center hover:text-primary">Terms</a></li>
             </ul>
           </div>
         </div>

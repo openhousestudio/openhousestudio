@@ -111,7 +111,7 @@ export function FinalCta() {
           </p>
           <a
             href={site.founder.checkoutUrl}
-            className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-full border border-ink px-6 text-[15px] font-medium text-ink transition-colors hover:bg-ink hover:text-bg"
+            className="mt-5 inline-flex min-h-11 items-center gap-2 text-[15px] font-medium text-ink underline decoration-line underline-offset-4 transition-colors hover:text-primary"
           >
             Become a founder
             <ArrowRight className="h-4 w-4" aria-hidden />

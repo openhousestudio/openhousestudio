@@ -32,7 +32,7 @@ export function Nav({ variant = "light" }: { variant?: "light" | "dark" }) {
           aria-label="Open House Studio, back to home"
           className={dark ? "text-light" : "text-ink"}
         >
-          <Wordmark tone={dark ? "light" : "ink"} />
+          <Wordmark compact tone={dark ? "light" : "ink"} />
         </a>
 
         <nav aria-label="Sections" className="hidden items-center gap-8 md:flex">
