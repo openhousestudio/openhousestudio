@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { formats } from "@/content/formats";
 import { Reveal } from "../reveal";
-import { PostPreview } from "../post-preview";
 
 export function Features() {
   return (
@@ -14,12 +14,17 @@ export function Features() {
                 (i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : "")
               }
             >
-              <div className="relative mx-auto w-full max-w-[340px]">
-                <div
-                  aria-hidden
-                  className="absolute inset-8 -z-10 rounded-full bg-sand/60 blur-2xl"
-                />
-                <PostPreview post={format.post} format={format.name} />
+              <div className="mx-auto w-full max-w-[360px] overflow-hidden rounded-xl border border-line bg-card">
+                <div className="aspect-[4/5]">
+                  <Image
+                    src={format.image}
+                    alt={`${format.name} post made by Open House Studio for Awa Road, Onehunga`}
+                    width={1080}
+                    height={1350}
+                    sizes="(min-width: 1024px) 360px, 80vw"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
               </div>
 
               <div className="max-w-[46ch]">

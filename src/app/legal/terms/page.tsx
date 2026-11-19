@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Terms — Open House Studio" };
 export default function TermsPage() {
   return (
     <>
-      <main className="mx-auto max-w-[720px] px-6 pb-24 pt-[120px]">
+      <main id="main" className="mx-auto max-w-[720px] px-6 pb-24 pt-[120px]">
         <a href="/" className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-muted transition-colors hover:text-ink">
           ← Back to Open House Studio
         </a>

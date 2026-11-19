@@ -10,10 +10,10 @@ export function CommunityStrip() {
     <section className="border-t border-line">
       <div className="mx-auto max-w-[1280px] px-6 py-24 lg:px-8 lg:py-32">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-[46ch]">
+          <div className="max-w-[600px]">
             <p className="label">The community</p>
             <h2 className="display mt-4 text-[clamp(30px,4vw,56px)] text-ink">
-              Posts we made, posts they posted.
+              Five formats, built for real listings.
             </h2>
           </div>
 
@@ -40,7 +40,9 @@ export function CommunityStrip() {
                   <span>
                     {entry.format} · {entry.suburb}
                   </span>
-                  <span className="text-muted/50">View</span>
+                  <span className="text-muted/50">
+                    {entry.example ? "Sample" : "View"}
+                  </span>
                 </p>
                 <div className="aspect-[4/5] overflow-hidden border border-line bg-card shadow-[0_14px_34px_-26px_rgba(26,23,20,0.55)] transition-all duration-300 ease-out group-hover:-translate-y-0.5 group-hover:border-ink/20 group-hover:shadow-[0_20px_40px_-24px_rgba(26,23,20,0.5)]">
                   <Image
@@ -48,7 +50,10 @@ export function CommunityStrip() {
                     alt={`${entry.format} post made for a listing in ${entry.suburb}`}
                     width={1080}
                     height={entry.format === "Story" ? 1920 : 1350}
-                    className="h-full w-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.045]"
+                    className={
+                      "h-full w-full object-cover transition-transform duration-[700ms] ease-out group-hover:scale-[1.045] " +
+                      (entry.format === "Story" ? "object-top" : "object-center")
+                    }
                   />
                 </div>
               </a>

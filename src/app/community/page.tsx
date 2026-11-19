@@ -13,10 +13,10 @@ export default function CommunityPage() {
   return (
     <>
       <Nav variant="dark" />
-      <main className="min-h-screen bg-ink text-light">
+      <main id="main" className="min-h-screen bg-ink text-light">
         <section className="mx-auto max-w-[1280px] px-6 pb-24 pt-[140px] lg:px-8 lg:pb-32 lg:pt-[180px]">
-          <div className="flex min-h-[calc(100vh-180px)] flex-col justify-center">
-            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+          <div className="flex flex-col">
+            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-sand">
               Community
             </p>
 
@@ -24,9 +24,9 @@ export default function CommunityPage() {
               Real posts, real listings.
             </h1>
 
-            <p className="mt-7 max-w-[52ch] text-[17px] leading-[1.7] text-light/60">
-              Every post here was made for an agent, then published by them. Nothing is
-              invented, and nobody is shown without asking first.
+            <p className="mt-7 max-w-[54ch] text-[17px] leading-[1.7] text-light/60">
+              Real posts made for real listings, alongside our five studio format samples.
+              Every sample is labelled, and no agent listing is shown without permission.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function CommunityPage() {
         <section className="border-t border-light/12">
           <div className="mx-auto grid max-w-[1280px] gap-10 px-6 py-20 lg:grid-cols-[1fr_auto] lg:items-end lg:px-8 lg:py-24">
             <div>
-              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-accent">
+              <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-sand">
                 Your post here
               </p>
               <h2 className="display mt-4 max-w-[24ch] text-[clamp(30px,4vw,52px)] text-light">
@@ -61,13 +61,13 @@ export default function CommunityPage() {
                 href={site.community.week.checkoutUrl}
                 className="inline-flex items-center rounded-full bg-accent px-6 py-3.5 text-[15px] font-medium text-ink transition-all duration-200 hover:-translate-y-px hover:bg-primary hover:text-light active:translate-y-0"
               >
-                Top for {site.community.week.days} days — ${site.community.week.price}
+                Top for {site.community.week.days} days, ${site.community.week.price}
               </a>
               <a
                 href={site.community.month.checkoutUrl}
                 className="inline-flex items-center rounded-full border border-light/25 px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:border-light/50 active:translate-y-0"
               >
-                Top for {site.community.month.days} days — ${site.community.month.price}
+                Top for {site.community.month.days} days, ${site.community.month.price}
               </a>
             </div>
           </div>

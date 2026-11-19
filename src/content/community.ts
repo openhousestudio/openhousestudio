@@ -25,8 +25,7 @@ export const community: CommunityEntry[] = [
     image: "/community/post-01-listing.jpg",
     format: "Listing",
     suburb: "Onehunga",
-    contact: { name: "[Agent name]", phone: "[phone]" },
-    featuredUntil: "2026-12-31",
+    contact: { name: "Studio sample", phone: "Awa Road, Onehunga" },
     example: true,
   },
   {
@@ -34,8 +33,7 @@ export const community: CommunityEntry[] = [
     image: "/community/post-02-open-home.jpg",
     format: "Open Home",
     suburb: "Onehunga",
-    contact: { name: "[Agent name]", phone: "[phone]" },
-    featuredUntil: "2026-12-24",
+    contact: { name: "Studio sample", phone: "Awa Road, Onehunga" },
     example: true,
   },
   {
@@ -43,8 +41,7 @@ export const community: CommunityEntry[] = [
     image: "/community/post-03-just-sold.jpg",
     format: "Just Sold",
     suburb: "Onehunga",
-    contact: { name: "[Agent name]", phone: "[phone]" },
-    featuredUntil: "2026-12-17",
+    contact: { name: "Studio sample", phone: "Awa Road, Onehunga" },
     example: true,
   },
   {
@@ -52,7 +49,7 @@ export const community: CommunityEntry[] = [
     image: "/community/post-04-review.jpg",
     format: "Review",
     suburb: "Onehunga",
-    contact: { name: "[Agent name]", phone: "[phone]" },
+    contact: { name: "Studio sample", phone: "Awa Road, Onehunga" },
     example: true,
   },
   {
@@ -60,7 +57,7 @@ export const community: CommunityEntry[] = [
     image: "/community/post-05-story.jpg",
     format: "Story",
     suburb: "Onehunga",
-    contact: { name: "[Agent name]", phone: "[phone]" },
+    contact: { name: "Studio sample", phone: "Awa Road, Onehunga" },
     example: true,
   },
 ];

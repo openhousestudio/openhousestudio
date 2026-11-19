@@ -17,7 +17,7 @@ export default async function FeaturedPage({
   const plan = params.plan === "month" ? "month" : "week";
 
   return (
-    <main className="mx-auto max-w-[720px] px-6 pb-24 pt-[120px]">
+    <main id="main" className="mx-auto max-w-[720px] px-6 pb-24 pt-[120px]">
       <Link
         href="/"
         className="text-[12px] font-medium uppercase tracking-[0.18em] text-ink/70 transition-colors hover:text-primary"

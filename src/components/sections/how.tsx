@@ -1,10 +1,22 @@
 import { Reveal } from "../reveal";
 
 const steps = [
-  { title: "Send the listing link or photos", body: "Paste your listing URL—or drop in the address, price and photos. One short form, no calls or meetings." },
-  { title: "We design & write the copy", body: "We lay out your photos in clean studio formats and write the property caption in a natural agent voice." },
-  { title: "Delivered in 48 hours", body: "Your finished post pack and captions arrive within two business days—fast enough for mid-week listings and Saturday open homes." },
-  { title: "Next in queue & 7-day tweaks", body: "As soon as one request is delivered, your next queued listing starts. Ask for unlimited tweaks for seven days." },
+  {
+    title: "Send the listing link or photos",
+    body: "Paste your listing URL, or drop in the address, price and photos. One short form, no calls or meetings.",
+  },
+  {
+    title: "We design and write the copy",
+    body: "We lay out your photos in clean studio formats and write the property caption in a natural agent voice.",
+  },
+  {
+    title: "Delivered in 48 hours",
+    body: "Your finished post pack and captions arrive in 48 hours, fast enough for mid-week listings and Saturday open homes.",
+  },
+  {
+    title: "Next in queue and 7-day tweaks",
+    body: "As soon as one request is delivered, your next queued listing starts. Ask for unlimited tweaks for seven days.",
+  },
 ];
 
 export function How() {
@@ -24,7 +36,7 @@ export function How() {
 
         <ol className="relative space-y-10 border-l border-line pl-8">
           {steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 0.08}>
+            <Reveal key={step.title}>
               <li className="relative">
                 <span
                   aria-hidden
@@ -32,7 +44,10 @@ export function How() {
                 >
                   {i + 1}
                 </span>
-                <h3 className="font-sans text-[17px] font-semibold text-ink">{step.title}</h3>
+                <h3 className="font-sans text-[17px] font-semibold text-ink">
+                  <span className="sr-only">Step {i + 1}: </span>
+                  {step.title}
+                </h3>
                 <p className="mt-1.5 text-[15px] leading-[1.65] text-muted">{step.body}</p>
               </li>
             </Reveal>
