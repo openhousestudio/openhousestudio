@@ -14,8 +14,8 @@ export function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-[28ch] text-[13px] leading-[1.6] text-muted">
-              Unlimited social posts for real estate agents, with the captions
-              already written.
+              Social posts for solo real estate agents, with the captions already
+              written and delivered in 48 hours.
             </p>
           </div>
 

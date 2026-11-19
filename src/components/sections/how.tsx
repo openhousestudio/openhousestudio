@@ -1,10 +1,10 @@
 import { Reveal } from "../reveal";
 
 const steps = [
-  { title: "Send the details", body: "Address, price and photos. One short form, no back and forth." },
-  { title: "We design it", body: "Posts and captions in your brand, across any format you need." },
-  { title: "Monday drop", body: "Everything lands in one batch, ready to post all week." },
-  { title: "Tweak it", body: "Unlimited tweaks for seven days after delivery, sent as one list." },
+  { title: "Send the listing link or photos", body: "Paste your listing URL—or drop in the address, price and photos. One short form, no calls or meetings." },
+  { title: "We design & write the copy", body: "We lay out your photos in clean studio formats and write the property caption in a natural agent voice." },
+  { title: "Delivered in 48 hours", body: "Your finished post pack and captions arrive within two business days—fast enough for mid-week listings and Saturday open homes." },
+  { title: "Next in queue & 7-day tweaks", body: "As soon as one request is delivered, your next queued listing starts. Ask for unlimited tweaks for seven days." },
 ];
 
 export function How() {

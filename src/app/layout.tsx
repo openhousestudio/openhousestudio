@@ -17,13 +17,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://openhousestudio.online"),
-  title: "Open House Studio — Unlimited social posts for agents",
+  title: "Open House Studio — Social posts & captions for real estate agents",
   description:
-    "Send your listing photos, get finished posts and captions back every Monday. Unlimited requests, one monthly price that falls every month you stay.",
+    "Send your listing link or photos, get finished social posts and captions back in 48 hours. One active request at a time, one monthly price that drops every month you stay.",
   openGraph: {
     title: "Open House Studio",
     description:
-      "Unlimited social posts for real estate agents, captions included, delivered every Monday. One monthly price that drops the longer you stay.",
+      "Social posts for real estate agents, captions included, delivered in 48 hours. One monthly price that drops the longer you stay.",
     url: "https://openhousestudio.online",
     siteName: "Open House Studio",
     type: "website",

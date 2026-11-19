@@ -35,7 +35,7 @@ src/
 │   └── icon.svg
 ├── components/
 │   ├── nav.tsx, wordmark.tsx, door-mark.tsx
-│   ├── post-preview.tsx      code-drawn template mockup
+│   ├── post-preview.tsx      code-drawn post mockup
 │   ├── glow.tsx, reveal.tsx
 │   └── sections/*            hero, proof, pillars, features, formats,
 │                             how, pricing, faq, final-cta, footer
@@ -48,7 +48,11 @@ src/
 ## Subscriptions (Stripe Billing)
 
 One Product (`Open House Studio`), one monthly USD Price per ladder rung, lookup key
-`rung_1` … `rung_19`. The ladder is read from `src/lib/site.ts`.
+`rung_1` … `rung_12`. The ladder ($99 down to $59) is read from `src/lib/site.ts`.
+
+Stripe prices cannot change amount. If a `rung_n` key already exists at the wrong amount
+(for example from the earlier $25 ladder), archive that price and create a new one under the
+same lookup key before running the checkout or webhook.
 
 Create the catalog in a sandbox:
 

@@ -1,8 +1,8 @@
 export function Proof() {
   const items = [
-    "Unlimited requests",
-    "New drop every Monday",
-    "Captions included",
+    "48-hour turnaround",
+    "Captions written for every post",
+    "1 active request at a time",
     "Cancel any time",
   ];
 

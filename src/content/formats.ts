@@ -6,6 +6,7 @@ export type Format = {
   eyebrow: string;
   headline: string;
   body: string;
+  caption: string;
   post: {
     kicker: string;
     title: string;
@@ -22,7 +23,9 @@ export const formats: Format[] = [
     blurb: "Send an address, a price and three photos. A carousel or single post comes back.",
     eyebrow: "Listing",
     headline: "Listings that look listed.",
-    body: "Send an address, a price and three photos. We send back a carousel or single post, with a caption that opens with the street, ends with the open home, and says nothing an agent would not say.",
+    body: "Send an address, a price and three photos. We send back a carousel or single post in 48 hours, with a caption that opens with the street, ends with the open home, and says nothing an agent would not say.",
+    caption:
+      "New to market on Awa Road. Four bedrooms, north-facing deck off the kitchen, and double internal garaging on a flat full site. First open home this Saturday, 11:00–11:45am.",
     post: {
       kicker: "Just listed",
       title: "Awa Road",
@@ -37,7 +40,9 @@ export const formats: Format[] = [
     blurb: "Signage, story and feed formats that match, so the weekend looks planned.",
     eyebrow: "Open house",
     headline: "Open house, handled.",
-    body: "Signage, story and feed posts that match. Date, time and address in the same place every week, with room for one good photograph. Ask once and the whole set arrives together.",
+    body: "Signage, story and feed posts that match. Date, time and address in the same place every week, with room for one good photograph. Ask on Wednesday and the whole weekend set arrives by Friday.",
+    caption:
+      "Open home tomorrow at Awa Road, 11:00–11:45am. Come see how the afternoon sun hits the back lawn. Full info pack and LIM available at the door.",
     post: {
       kicker: "Open home",
       title: "Saturday, 11–11:45",
@@ -53,6 +58,8 @@ export const formats: Format[] = [
     eyebrow: "Just sold",
     headline: "Just sold, done.",
     body: "Announce the win without sounding like a template. Every just-sold post comes with three caption options: quiet, grateful, and a short one for people who hate a paragraph.",
+    caption:
+      "Sold on Awa Road after 9 days on the market and three competing offers. Thank you to our vendors for trusting the campaign—and welcome to the neighbourhood to the new owners.",
     post: {
       kicker: "Just sold",
       title: "Under offer in 9 days",
@@ -68,6 +75,8 @@ export const formats: Format[] = [
     eyebrow: "Review",
     headline: "Reviews that read.",
     body: "Send the quote and we build the post around it, so the words carry the frame. Two caption styles: one short, one that sets up the story first.",
+    caption:
+      "Selling a family home of twenty years takes patience. Grateful to Sarah and her family for letting us guide the sale at Awa Road from first appraisal to settlement.",
     post: {
       kicker: "Client review",
       title: "“Sold in a week, and she never once pushed.”",
@@ -83,6 +92,8 @@ export const formats: Format[] = [
     eyebrow: "Story",
     headline: "Stories for the quiet days.",
     body: "Vertical formats for Tuesdays and Thursdays, when there is no listing to announce. Behind the scenes, a street you like, a question worth asking.",
+    caption:
+      "Late afternoon walk down Awa Road before tomorrow’s appraisal. Still one of the quietest tree-lined pockets in Onehunga.",
     post: {
       kicker: "Story",
       title: "The street nobody asks about",

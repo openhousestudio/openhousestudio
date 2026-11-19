@@ -1,15 +1,19 @@
 export const faqs = [
   {
     q: "What do I actually get each month?",
-    a: "Unlimited social posts for your listings, each with the caption written. You send the address, price and photos; we send back finished posts every Monday, ready to publish.",
+    a: "Social posts for your listings across five formats, each with the caption written. You send the address, price and photos (or a listing link); we send back finished posts within 48 hours, ready to publish.",
   },
   {
-    q: "How does unlimited work?",
-    a: "Send as many requests as you like. They join one queue and are worked in order, then delivered together in the Monday drop. No credits, no per-post fees.",
+    q: "How does the request queue work?",
+    a: "Submit as many requests to your queue as you like. We work on one active request at a time and deliver it within 48 hours (two business days). As soon as it lands, your next queued request starts. In practice, that is two to three full listing packs every week—without per-post fees.",
   },
   {
-    q: "What counts as a request?",
-    a: "One post, carousel or story set. Same listing, different crop, does not count twice. Anything outside social posts, such as flyers or print, is quoted separately.",
+    q: "What counts as one request?",
+    a: "One format pack for a single listing—for example, a 3-slide listing announcement carousel, or a matching open house feed + story set, plus its written caption. Need all five formats for a new listing? Queue them up and they arrive in order across the week. Print and flyers are quoted separately.",
+  },
+  {
+    q: "What if I get a listing mid-week and have a Saturday open home?",
+    a: "That is why we deliver in 48 hours instead of waiting for a weekly batch. Send the listing by Wednesday afternoon and your open house feed and story posts are in your inbox by Friday.",
   },
   {
     q: "Can I ask for changes?",
@@ -21,6 +25,6 @@ export const faqs = [
   },
   {
     q: "What happens to my price when I cancel?",
-    a: "Cancelling resets the clock. If you come back later, you start again at the current starting price and the discount builds from there.",
+    a: "Cancelling resets the clock. If you come back later, you start again at the current starting price and the 5% monthly loyalty discount builds from there.",
   },
 ];

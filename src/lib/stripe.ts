@@ -1,4 +1,5 @@
 import Stripe from "stripe";
+import { priceLadder } from "@/lib/site";
 
 let client: Stripe | null = null;
 
@@ -13,9 +14,9 @@ export function getStripe(): Stripe {
 }
 
 export const PLAN_METADATA_KEY = "tenure_month";
-export const MAX_TENURE_MONTH = 19;
+export const MAX_TENURE_MONTH = priceLadder.length;
 
-/** Stripe lookup key for a given ladder rung. Rung 1 is $25, rung 19 is $10. */
+/** Stripe lookup key for a given ladder rung. Rung 1 is $99, the last rung is the $59 floor. */
 export function lookupKeyForRung(rung: number): string {
   const clamped = Math.min(Math.max(rung, 1), MAX_TENURE_MONTH);
   return `rung_${clamped}`;

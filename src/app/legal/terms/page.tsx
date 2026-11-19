@@ -20,9 +20,12 @@ export default function TermsPage() {
             Access is personal to the subscriber.
           </p>
           <p>
-            Requests are unlimited and worked through one queue in the order received, then
-            delivered in the weekly drop, currently Monday. Turnaround is not guaranteed per
-            request, only per drop.
+            You can submit as many requests to your queue as you like. Requests are worked
+            one active request at a time in the order received, with a typical turnaround of
+            48 hours (two business days) per active request. One request covers a single
+            format pack for one listing (for example, a listing carousel, an open house feed
+            and story set, a just-sold post, a client review, or a story set) along with its
+            written caption.
           </p>
           <p>
             The Studio plan includes a commercial licence to use the delivered designs in

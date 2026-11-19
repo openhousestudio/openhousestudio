@@ -4,7 +4,9 @@
  *   STRIPE_SECRET_KEY=sk_test_... node scripts/stripe-catalog.mjs
  *
  * One Product, one monthly USD Price per ladder rung, with lookup key
- * `rung_1` … `rung_19`. Safe to re-run: existing lookup keys are skipped.
+ * `rung_1` … `rung_12`. Safe to re-run: existing lookup keys are skipped.
+ * Stripe cannot change a Price's amount, so a key that already exists at the wrong
+ * amount must be archived and recreated, not re-run.
  * The ladder is read from src/lib/site.ts so the catalog cannot drift from
  * the marketing page.
  */

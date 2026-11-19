@@ -10,6 +10,7 @@ export const site = {
   },
   founder: {
     price: 39,
+    spots: 5,
     checkoutUrl: "https://buy.stripe.com/28E4gy4aicDmbJq4ZD3sI05",
   },
   community: {
@@ -24,7 +25,8 @@ export const site = {
       checkoutUrl: "https://buy.stripe.com/4gM7sK9uCfPyeVC1Nr3sI07",
     },
   },
-  dropDay: "Monday",
+  turnaround: "48 hours",
+  allowance: "One active request at a time",
   nav: [
     { label: "Formats", href: "#formats" },
     { label: "Community", href: "/community" },

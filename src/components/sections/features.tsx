@@ -28,6 +28,14 @@ export function Features() {
                   {format.headline}
                 </h2>
                 <p className="mt-5 text-[17px] leading-[1.7] text-muted">{format.body}</p>
+                <div className="mt-6 rounded-lg border border-line bg-card p-4">
+                  <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-primary">
+                    Included caption sample
+                  </p>
+                  <p className="mt-2 text-[14px] leading-[1.6] text-ink/85">
+                    “{format.caption}”
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>

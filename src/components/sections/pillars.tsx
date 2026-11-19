@@ -5,17 +5,17 @@ const pillars = [
   {
     icon: PenLine,
     title: "Captions included",
-    body: "Every post arrives with the words already written. Approve and post.",
-  },
-  {
-    icon: House,
-    title: "Unlimited requests",
-    body: "Send as many listings as you like. One queue, worked in order, no credit counting.",
+    body: "Every post arrives with the property copy already written. No blank caption box—just approve and post.",
   },
   {
     icon: CalendarClock,
-    title: "New every Monday",
-    body: "Everything lands in one drop at the start of the week, ready to post.",
+    title: "48-hour turnaround",
+    body: "List on Wednesday, post your open house by Friday. Fast two-business-day delivery built around real estate timelines.",
+  },
+  {
+    icon: House,
+    title: "Simple active queue",
+    body: "Queue as many listings as you like. We deliver one active request every 48 hours—up to 3 full packs a week, zero per-post fees.",
   },
 ];
 

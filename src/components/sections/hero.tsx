@@ -27,7 +27,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-[1280px] gap-14 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-8 lg:px-8">
         <div>
           <motion.p className="label" {...rise(0)}>
-            Unlimited posts for agents
+            Social posts &amp; captions for solo agents
           </motion.p>
 
           <h1 className="display mt-5 text-balance text-[clamp(38px,6.4vw,88px)] text-ink">
@@ -42,8 +42,9 @@ export function Hero() {
             className="mt-6 max-w-[46ch] text-[16px] leading-[1.6] text-muted sm:mt-7 sm:text-[18px] sm:leading-[1.65]"
             {...rise(4)}
           >
-            Send us your listing and we send back the posts. Unlimited requests, every
-            caption written, one drop every Monday. Your price drops every month you stay.
+            Send us your listing link or photos and we send back finished posts with the
+            captions already written. One active request at a time, delivered in 48 hours.
+            Your price drops 5% every month you stay.
           </motion.p>
 
           <motion.div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center" {...rise(5)}>
@@ -51,7 +52,7 @@ export function Hero() {
               href="#free"
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-[15px] font-medium text-light transition-all duration-200 hover:-translate-y-px hover:bg-primary-hover active:translate-y-0 active:scale-[0.985] sm:w-auto"
             >
-              Start free
+              Get 5 free samples + 1 custom post
               <ArrowRight className="h-4 w-4" aria-hidden />
             </a>
             <a
@@ -63,7 +64,7 @@ export function Hero() {
           </motion.div>
 
           <motion.p className="mt-8 text-[13px] text-muted" {...rise(6)}>
-            Unlimited requests · Monday drops · captions included · no design skills
+            48-hour turnaround · captions written · one active request at a time · cancel any time
           </motion.p>
         </div>
 
