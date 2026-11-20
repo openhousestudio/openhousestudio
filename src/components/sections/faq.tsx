@@ -13,8 +13,8 @@ export function Faq() {
         </div>
 
         <div className="divide-y divide-line border-t border-line">
-          {faqs.map((item, i) => (
-            <Reveal key={item.q} delay={i * 0.04}>
+          {faqs.map((item) => (
+            <Reveal key={item.q}>
               <details className="group py-5">
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-[16px] font-medium text-ink marker:hidden">
                   {item.q}

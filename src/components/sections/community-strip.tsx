@@ -33,8 +33,8 @@ export function CommunityStrip() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {picks.map((entry, i) => (
-            <Reveal key={entry.slug} delay={i * 0.06}>
+          {picks.map((entry) => (
+            <Reveal key={entry.slug}>
               <a href="/community" className="group block">
                 <p className="mb-2 flex items-baseline justify-between text-[11px] uppercase tracking-[0.16em] text-muted">
                   <span>

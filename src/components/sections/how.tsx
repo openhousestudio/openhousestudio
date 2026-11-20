@@ -1,5 +1,3 @@
-import { Reveal } from "../reveal";
-
 const steps = [
   {
     title: "Send the listing link or photos",
@@ -36,21 +34,19 @@ export function How() {
 
         <ol className="relative space-y-10 border-l border-line pl-8">
           {steps.map((step, i) => (
-            <Reveal key={step.title}>
-              <li className="relative">
-                <span
-                  aria-hidden
-                  className="absolute -left-[41px] top-1 flex h-5 w-5 items-center justify-center rounded-full border border-line bg-bg text-[10px] tabular-nums text-primary"
-                >
-                  {i + 1}
-                </span>
-                <h3 className="font-sans text-[17px] font-semibold text-ink">
-                  <span className="sr-only">Step {i + 1}: </span>
-                  {step.title}
-                </h3>
-                <p className="mt-1.5 text-[15px] leading-[1.65] text-muted">{step.body}</p>
-              </li>
-            </Reveal>
+            <li key={step.title} className="reveal relative">
+              <span
+                aria-hidden
+                className="absolute -left-[41px] top-1 flex h-5 w-5 items-center justify-center rounded-full border border-line bg-bg text-[10px] tabular-nums text-primary"
+              >
+                {i + 1}
+              </span>
+              <h3 className="font-sans text-[17px] font-semibold text-ink">
+                <span className="sr-only">Step {i + 1}: </span>
+                {step.title}
+              </h3>
+              <p className="mt-1.5 text-[15px] leading-[1.65] text-muted">{step.body}</p>
+            </li>
           ))}
         </ol>
       </div>

@@ -14,8 +14,12 @@ export function Hero() {
           <p className="label">Open House Studio</p>
 
           <h1 className="display mt-5 text-balance text-[clamp(36px,5vw,72px)] text-ink">
-            {lines.map((line) => (
-              <span key={line} className="block">
+            {lines.map((line, i) => (
+              <span
+                key={line}
+                className="hero-rise block"
+                style={{ animationDelay: `${i * 120}ms` }}
+              >
                 {line}
               </span>
             ))}
@@ -49,7 +53,7 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto flex w-full max-w-[470px] items-center justify-between gap-4">
-          <div className="aspect-[4/5] w-[33%] overflow-hidden rounded-lg border border-line bg-card shadow-[0_18px_44px_-28px_rgba(26,23,20,0.5)]">
+          <div className="hero-rise aspect-[4/5] w-[33%] overflow-hidden rounded-lg border border-line bg-card shadow-[0_18px_44px_-28px_rgba(26,23,20,0.5)]" style={{ animationDelay: "500ms" }}>
             <Image
               src="/community/post-02-open-home.jpg"
               alt="Open home post made by Open House Studio for Awa Road, Onehunga"
@@ -60,7 +64,7 @@ export function Hero() {
             />
           </div>
 
-          <div className="aspect-[4/5] w-[63%] overflow-hidden rounded-xl border border-line bg-card shadow-[0_26px_60px_-34px_rgba(26,23,20,0.5)]">
+          <div className="hero-rise aspect-[4/5] w-[63%] overflow-hidden rounded-xl border border-line bg-card shadow-[0_26px_60px_-34px_rgba(26,23,20,0.5)]" style={{ animationDelay: "650ms" }}>
             <Image
               src="/community/post-01-listing.jpg"
               alt="Listing post made by Open House Studio for Awa Road, Onehunga"

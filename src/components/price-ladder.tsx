@@ -57,7 +57,7 @@ export function PriceLadder() {
             >
               <span
                 className={
-                  "block w-full rounded-sm transition-all duration-200 " +
+                  "grow-bar block w-full rounded-sm transition-all duration-200 " +
                   (active ? "bg-sand" : "bg-bg/20 group-hover/step:bg-bg/40")
                 }
                 style={{ height: `${height}px` }}

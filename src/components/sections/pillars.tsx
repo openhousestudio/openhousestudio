@@ -24,8 +24,8 @@ export function Pillars() {
     <section className="mx-auto max-w-[1280px] px-6 py-24 lg:px-8 lg:py-32">
       <h2 className="sr-only">What every subscription includes</h2>
       <div className="grid gap-6 md:grid-cols-3">
-        {pillars.map((pillar, i) => (
-          <Reveal key={pillar.title} delay={i * 0.08}>
+        {pillars.map((pillar) => (
+          <Reveal key={pillar.title}>
             <div className="h-full rounded-lg border border-line bg-card p-7">
               <pillar.icon className="h-6 w-6 text-primary" aria-hidden />
               <h3 className="mt-5 font-sans text-[17px] font-semibold text-ink">

@@ -57,7 +57,7 @@ export function Pricing() {
             </div>
           </Reveal>
 
-          <Reveal delay={0.08}>
+          <Reveal>
             <div className="flex h-full flex-col rounded-xl border border-sand/40 bg-bg/[0.04] p-8">
               <div className="flex items-center justify-between">
                 <p className="text-[11px] uppercase tracking-[0.16em] text-sand">
